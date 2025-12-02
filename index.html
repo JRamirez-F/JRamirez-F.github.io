@@ -1,73 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Lab</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            height: 100vh;
-            font-family: Arial, sans-serif;
-            background: linear-gradient(135deg, #0d1b2a, #1b263b, #415a77);
-            color: #e0e1dd;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
+<meta charset="UTF-8">
+<title>Jorge's Lab</title>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;700&display=swap');
 
-        .container {
-            text-align: center;
-            padding: 40px;
-            background: rgba(255, 255, 255, 0.08);
-            border-radius: 16px;
-            backdrop-filter: blur(8px);
-            box-shadow: 0 0 25px rgba(0,0,0,0.3);
-            width: 80%;
-            max-width: 480px;
-        }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
 
-        h1 {
-            margin-top: 0;
-            font-size: 2.2em;
-            letter-spacing: 1px;
-        }
+    body {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Roboto Mono', monospace;
+        background-image: url(JRamirez-F/Picture_Gallery/blob/main/images/Image_fibers.png);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        color: #f4f4f4;
+        text-align: center;
+        line-height: 1.6;
+        padding: 20px;
+    }
 
-        p {
-            color: #c7c9cc;
-            font-size: 1.1em;
-            margin-bottom: 30px;
-        }
+    .container {
+    max-width: 700px;
+    padding: 20px 40px;
+    border-radius: 51px;
+    background: rgb(14 39 129 / 20%);
+    /* backdrop-filter: blur(4px); */
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    }
 
-        .btn {
-            display: block;
-            width: 80%;
-            margin: 12px auto;
-            padding: 14px;
-            color: #e0e1dd;
-            background: #415a77;
-            border: none;
-            border-radius: 8px;
-            font-size: 1.1em;
-            cursor: pointer;
-            transition: 0.2s;
-            text-decoration: none;
-        }
+    h1 {
+        font-size: 3em;
+        font-weight: 700;
+        margin-bottom: 18px;
+        letter-spacing: 1px;
+    }
 
-        .btn:hover {
-            background: #778da9;
-            transform: scale(1.04);
-        }
-    </style>
+    p {
+        font-size: 1.2em;
+        margin-bottom: 6px;
+    }
+
+    p.small {
+        font-size: 1.1em;
+        opacity: 0.9;
+    }
+
+    
+
+    @keyframes typing {
+        from { width: 0 }
+        to { width: 100% }
+    }
+
+    @keyframes blink {
+        from, to { border-color: transparent }
+        50% { border-color: #222; }
+    }
+
+    .cta {
+        display: inline-block;
+        margin-top: 16px;
+        font-size: 1em;
+        text-decoration: none;
+        color: #91f3c7;
+        border-bottom: 2px solid #abf7d7;
+        padding-bottom: 2px;
+        transition: 0.2s;
+    }
+
+    .cta:hover {
+        color: #555;
+        border-color: #555;
+    }
+
+    @media (max-width: 600px) {
+        h1 { font-size: 2.2em; }
+        p { font-size: 1.4em; }
+    }
+</style>
 </head>
-
 <body>
     <div class="container">
-        <h1></h1>Lab</h1>
-        <p></p>
-
-        <a class="btn" href="#">🔬 Research projects.</a>
-        <a class="btn" href="#">🔬 Others</a>
+        <h1>Jorge Ramirez Research Lab</h1>
+        <p >Research. People. Gallery.</p>
+        <p class="small">Publications. Code.</p>
+        <a href="#" class="cta">Explore the Lab →</a>
     </div>
 </body>
 </html>
