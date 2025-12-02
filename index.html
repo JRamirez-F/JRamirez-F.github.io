@@ -1,30 +1,73 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>404?!</title>
+    <title>Lab</title>
     <style>
         body {
-            background: #111;
-            color: #eee;
-            font-family: Arial, sans-serif;
-            text-align: center;
-            padding-top: 100px;
-        }
-        h1 {
-            font-size: 120px;
             margin: 0;
-            color: #ff4444;
+            padding: 0;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #0d1b2a, #1b263b, #415a77);
+            color: #e0e1dd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
+
+        .container {
+            text-align: center;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 16px;
+            backdrop-filter: blur(8px);
+            box-shadow: 0 0 25px rgba(0,0,0,0.3);
+            width: 80%;
+            max-width: 480px;
+        }
+
+        h1 {
+            margin-top: 0;
+            font-size: 2.2em;
+            letter-spacing: 1px;
+        }
+
         p {
-            font-size: 24px;
-            color: #bbb;
-            margin-top: -10px;
+            color: #c7c9cc;
+            font-size: 1.1em;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            display: block;
+            width: 80%;
+            margin: 12px auto;
+            padding: 14px;
+            color: #e0e1dd;
+            background: #415a77;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1em;
+            cursor: pointer;
+            transition: 0.2s;
+            text-decoration: none;
+        }
+
+        .btn:hover {
+            background: #778da9;
+            transform: scale(1.04);
         }
     </style>
 </head>
+
 <body>
-    <h1>404</h1>
-    <p>Wait… this *IS* the homepage. 😅</p>
+    <div class="container">
+        <h1>Welcome to Jorge's Lab</h1>
+        <p>A place for experiments, science, coding, and chaos.</p>
+
+        <a class="btn" href="#">🔬 Experiments</a>
+        <a class="btn" href="#">🧪 About Me</a>
+    </div>
 </body>
 </html>
