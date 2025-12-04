@@ -5,52 +5,99 @@
 <title>Jorge Ramirez - Publications</title>
 
 <style>
+/* ==============================
+   GLOBAL STYLES
+============================== */
 body {
     font-family: 'Roboto Mono', monospace;
     background-color: #111;
     color: #eee;
-    padding: 40px;
+    padding: 40px 20px;
     line-height: 1.5;
 }
 
 h1 {
     font-size: 2.5em;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
     text-align: center;
 }
 
 h2 {
-    font-size: 2.0em;
+    font-size: 2em;
+    margin-top: 30px;
     margin-bottom: 15px;
-    padding: 1000;             /* remove default padding */
-    margin-left: 1000;         /* center horizontally */
-    text-align: left;
+    color: #8dcfff;
 }
 
+/* ==============================
+   PUBLICATION LIST
+============================== */
 .pub-list {
-    list-style: none;       /* remove bullets */
-    padding: 0;             /* remove default padding */
-    margin: 0 auto;         /* center horizontally */
+    list-style: none;
+    padding: 0;
+    margin: 0 auto 30px auto;
     max-width: 90%;         /* scale with screen width */
     width: 2048px;           /* preferred width on large screens */
-    box-sizing: border-box; /* include padding in width */
 }
 
 .pub-list li {
-    margin-bottom: 1em;     /* space between items */
-    line-height: 1.5;       /* readable line spacing */
+    margin-bottom: 1.5em;
+    line-height: 1.5;
+    padding: 1em 1.2em;
+    border-radius: 8px;
+    background-color: rgba(30, 30, 30, 0.7);
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.pub-list li:hover {
+    background-color: rgba(36, 153, 211, 0.1);
+    transform: translateY(-2px);
 }
 
 .pub-list li a {
-    color: #dddddd;          /* default link color */
-    text-decoration: none;   /* no underline */
-    transition: color 0.2s ease;
+    color: #eee;
+    text-decoration: none;
+    display: block;
+    font-size: 1em;
 }
 
 .pub-list li a:hover {
-    color: #2499d3;          /* hover highlight */
+    color: #91f3c7;
 }
 
+.pub-list li a strong {
+    color: #c5d2e3;
+}
+
+.pub-list li a em {
+    color: #ccc;
+}
+
+.pub-list li sub {
+    display: block;
+    font-size: 0.8em;
+    color: #aaa;
+    margin-top: 0.2em;
+}
+
+/* ==============================
+   RESPONSIVE
+============================== */
+@media (max-width: 768px) {
+    body {
+        padding: 20px 10px;
+    }
+    h1 {
+        font-size: 2em;
+    }
+    h2 {
+        font-size: 1.6em;
+    }
+    .pub-list li {
+        font-size: 0.95em;
+        padding: 0.8em 1em;
+    }
+}
 </style>
 </head>
 
@@ -60,112 +107,100 @@ h2 {
 <h2>2025</h2>
 <ul class="pub-list">
     <li><a href="https://doi.org/10.1101/2025.10.29.685130" target="_blank">
-       Ramirez-Franco J, Debreux K, Sangiardi M, Belghazi M, Lévêque C, Seagar M, El Far O. A hyperglycosylated form of Kv<sub>1.2</sub> upregulated in LGI1 knockout mice. bioRxiv 2025.
+       <strong>Ramirez-Franco J, Debreux K, Sangiardi M, Belghazi M, Lévêque C, Seagar M, El Far O.</strong> 
+       A hyperglycosylated form of Kv1.2 upregulated in LGI1 knockout mice.
+       <em>bioRxiv 2025.</em>
     </a></li>
 
     <li><a href="https://doi.org/10.1093/brain/awaf147" target="_blank">
-        Barbay T, Pecchi E, Ramirez-Franco J, Ivanov A, Brocard F, Rouach N, Bos R. Functional contribution of astrocytic Kir4.1 channels to spasticity after spinal cord injury. Brain. 2025.
+        <strong>Barbay T, Pecchi E, Ramirez-Franco J, Ivanov A, Brocard F, Rouach N, Bos R</strong>. 
+        Functional contribution of astrocytic Kir4.1 channels to spasticity after spinal cord injury. 
+        <em>Brain 2025.</em>
     </a></li>
 
     <li><a href="https://doi.org/10.3389/fnana.2025.1652848" target="_blank">
-        Leblond L, Ramirez-Franco J, Michelle C, Wanaverbecq N, Evin M. Spinal cord morphology and PKD2L1<sup>+</sup> cells distribution: effects of age, sex, and spinal segment in mice. Front Neuroanat. 2025.
+        <strong>Leblond L, Ramirez-Franco J, Michelle C, Wanaverbecq N, Evin M</strong>. 
+        Spinal cord morphology and PKD2L1<sup>+</sup> cells distribution: effects of age, sex, and spinal segment in mice. 
+        <em>Front Neuroanat 2025.</em>
     </a></li>
- 
+
     <li><a href="https://doi.org/10.1038/s42003-025-08559-x" target="_blank">
-        Crozat E*, Blasco E*, Ramirez-Franco J*, Riondel P, Jurčić N, Seddik R, Michelle
-        C, Trouslard J, Wanaverbecq N. Cerebrospinal fluid-contacting neurons are sensory neurons with uniform morphological and region-specific electrophysiological properties in the mouse spinal cord. Commun Biol. 2025.
-    </a><sub>*Co-first authors</sub>    
-    </li>
+        <strong>Crozat E*, Blasco E*, Ramirez-Franco J*, Riondel P, Jurčić N, Seddik R, Michelle C, Trouslard J, Wanaverbecq N</strong>. 
+        Cerebrospinal fluid-contacting neurons are sensory neurons with uniform morphological and region-specific electrophysiological properties in the mouse spinal cord. 
+        <em>Commun Biol 2025.</em>
+    </a><sub>*Co-first authors</sub></li>
 </ul>
 
 <h2>2024</h2>
 <ul class="pub-list">
     <li><a href="https://doi.org/10.1101/2024.12.02.626379" target="_blank">
-        Leana-Sandoval G, Kolli AV, Sandoval MA, Saavedra E, Li KH, Chen LY, Burlingame AL, Ramírez-Franco J, Díaz-Alonso J. The VGCC auxiliary subunit α2δ1 is an extracellular GluA1 interactor and regulates LTP, spatial memory, and seizure susceptibility. bioRxiv [Preprint]. 2024.
+        <strong>Leana-Sandoval G, Kolli AV, Sandoval MA, Saavedra E, Li KH, Chen LY, Burlingame AL, Ramírez-Franco J, Díaz-Alonso J</strong>. 
+        The VGCC auxiliary subunit α2δ1 is an extracellular GluA1 interactor and regulates LTP, spatial memory, and seizure susceptibility. 
+        <em>bioRxiv [Preprint] 2024.</em>
     </a></li>
 
     <li><a href="https://doi.org/10.1016/j.nbd.2024.106513" target="_blank">
-        Ramirez-Franco J#, Debreux K, Sangiardi M, Belghazi M, Kim Y, Lee SH, Lévêque C, Seagar M, El Far O#. The downregulation of Kv1 channels in Lgi1<sup>-/-</sup>mice is accompanied by a profound modification of its interactome and a parallel decrease in Kv2 channels. Neurobiol Dis. 2024.
-    </a><sub>#Co-corresponding authors</sub>   
-    </li>
-
-    <li><a href="https://doi.org/10.1038/s42003-023-05441-6" target="_blank">
-        Riondel P, Jurčić N, Mounien L, Ibrahim S, Ramirez-Franco J, Stefanovic S,
-        Trouslard J, Wanaverbecq N, Seddik R. Evidence for Two Subpopulations of
-        Cerebrospinal Fluid-Contacting Neurons with Opposite GABAergic Signaling in
-        Adult Mouse Spinal Cord. J Neurosci. 2024.
-    </a></li>
-
-    <li><a href="https://doi.org/10.1016/j.ymthe.2024.01.029" target="_blank">
-        Kerzonkuf M, Verneuil J, Brocard C, Dingu N, Trouplin V, Ramirez Franco JJ,
-        Bartoli M, Brocard F, Bras H. Knockdown of calpain1 in lumbar motoneurons
-        reduces spasticity after spinal cord injury in adult rats. Mol Ther. 2024.
-    </a></li>
-
+        <strong> Ramirez-Franco J#, Debreux K, Sangiardi M, Belghazi M, Kim Y, Lee SH, Lévêque C, Seagar M, El Far O#.</strong> 
+        The downregulation of Kv1 channels in Lgi1<sup>-/-</sup> mice is accompanied by a profound modification of its interactome and a parallel decrease in Kv2 channels. 
+        <em>Neurobiol Dis 2024.</em>
+    </a><sub>*Co-corresponding authors</sub></li>
 </ul>
 
 <h2>2023</h2>
 <ul class="pub-list">
     <li><a href="https://doi.org/10.1523/JNEUROSCI.0701-23.2023" target="_blank">
-       Extrémet J, Ramirez-Franco J, Fronzaroli-Molinieres L, Boumedine-Guignon N,
-       Ankri N, El Far O, Garrido JJ, Debanne D, Russier M. Rescue of Normal
-       Excitability in LGI1-Deficient Epileptic Neurons. J Neurosci. 2023.
+       <strong>Extrémet J, Ramirez-Franco J, Fronzaroli-Molinieres L, Boumedine-Guignon N, Ankri N, El Far O, Garrido JJ, Debanne D, Russier M</strong>. 
+       Rescue of Normal Excitability in LGI1-Deficient Epileptic Neurons. 
+       <em>J Neurosci 2023.</em>
     </a></li>
 
     <li><a href="https://doi.org/10.1038/s42003-023-05441-6" target="_blank">
-        Burkert N, Roy S, Häusler M, Wuttke D, Müller S, Wiemer J, Hollmann H,
-        Oldrati M, Ramirez-Franco J, Benkert J, Fauler M, Duda J, Goaillard JM, Pötschke
-        C, Münchmeyer M, Parlato R, Liss B. Deep learning-based image analysis
-        identifies a DAT-negative subpopulation of dopaminergic neurons in the lateral
-        Substantia nigra. Commun Biol. 2023.
+        <strong>Burkert N, Roy S, Häusler M, Wuttke D, Müller S, Wiemer J, Hollmann H, Oldrati M, Ramirez-Franco J, Benkert J, Fauler M, Duda J, Goaillard JM, Pötschke C, Münchmeyer M, Parlato R, Liss B.</strong>. 
+        Deep learning-based image analysis identifies a DAT-negative subpopulation of dopaminergic neurons in the lateral Substantia nigra. 
+        <em>Commun Biol 2023.</em>
     </a></li>
-
-    <li><a href="https://doi:10.1038/s41380-023-02269-8" target="_blank">
-        González-Arias C, Sánchez-Ruiz A, Esparza J, Sánchez-Puelles C, Arancibia L,
-        Ramírez-Franco J, Gobbo D, Kirchhoff F, Perea G. Dysfunctional serotonergic
-        neuron-astrocyte signaling in depressive-like states. Mol Psychiatry. 2023.
-    </a></li>
-
 </ul>
-    <h2>2022</h2>
-    <ul class="pub-list">
+
+<h2>2022</h2>
+<ul class="pub-list">
     <li><a href="https://doi.org/10.1093/brain/awac218" target="_blank">
-       Ramirez-Franco J, Debreux K, Extremet J, Maulet Y, Belghazi M, Villard C,
-       Sangiardi M, Youssouf F, El Far L, Lévêque C, Debarnot C, Marchot P, Paneva S,
-       Debanne D, Russier M, Seagar M, Irani SR, El Far O. Patient-derived antibodies
-       reveal the subcellular distribution and heterogeneous interactome of LGI1.
-       Brain. 2022.
+       <strong>Ramirez-Franco J, Debreux K, Extremet J, Maulet Y, Belghazi M, Villard C, Sangiardi M, Youssouf F, El Far L, Lévêque C, Debarnot C, Marchot P, Paneva S, Debanne D, Russier M, Seagar M, Irani SR, El Far O</strong>. 
+       Patient-derived antibodies reveal the subcellular distribution and heterogeneous interactome of LGI1. 
+       <em>Brain 2022.</em>
     </a></li>
 
-    <li><a href="https://doi.org/10.1007/s00018-022-04527-4" target="_blank">
-        Ramirez-Franco J, Azzaz F, Sangiardi M, Ferracci G, Youssouf F, Popoff MR,
-        Seagar M, Lévêque C, Fantini J, El Far O. Molecular landscape of BoNT/B bound to
-        a membrane-inserted synaptotagmin/ganglioside complex. Cell Mol Life Sci. 2022.
+    <li><a href="https://doi.org/10.1016/10.1007/s00018-022-04527-4" target="_blank">
+        <strong>Ramirez-Franco J, Azzaz F, Sangiardi M, Ferracci G, Youssouf F, Popoff MR, Seagar M, Lévêque C, Fantini J, El Far O</strong>. 
+        Molecular landscape of BoNT/B bound to a membrane-inserted synaptotagmin/ganglioside complex. 
+        <em>Cell Mol Life Sci 2022.</em>
     </a></li>
-
 </ul>
 
-</ul>
-    <h2>2021</h2>
+<h2>2021</h2>
     <ul class="pub-list">
     <li><a href="https://doi.org/10.1523/ENEURO.0207-21.2021" target="_blank">
-        Haddjeri-Hopkins A, Tapia M, Ramirez-Franco J, Tell F, Marqueze-Pouey B,
-        Amalric M, Goaillard JM. Refining the Identity and Role of Kv4 Channels in Mouse
-        Substantia Nigra Dopaminergic Neurons. eNeuro. 2021.
+        <strong>Haddjeri-Hopkins A, Tapia M, Ramirez-Franco J, Tell F, Marqueze-Pouey B, Amalric M, Goaillard JM.</strong>
+        Refining the Identity and Role of Kv4 Channels in Mouse Substantia Nigra Dopaminergic Neurons. 
+        <em>eNeuro 2021.</em>
     </a></li>
 </ul>
 
-</ul>
-    <h2>2020</h2>
+<h2>2020</h2>
     <ul class="pub-list">
     <li><a href="https://doi.org/10.1093/brain/awaa104" target="_blank">
-        Ramberger M, Berretta A, Tan JMM, Sun B, Michael S, Yeo T, Theorell J,
-        Bashford-Rogers R, Paneva S, O'Dowd V, Dedi N, Topia S, Griffin R, Ramirez-
-        Franco J, El Far O, Baulac S, Leite MI, Sen A, Jeans A, McMillan D, Marshall D,
-        Anthony D, Lightwood D, Waters P, Irani SR. Distinctive binding properties of
-        human monoclonal LGI1 autoantibodies determine pathogenic mechanisms. Brain.
-        2020.
+        <strong>Ramberger M, Berretta A, Tan JMM, Sun B, Michael S, Yeo T, Theorell J, Bashford-Rogers R, Paneva S, O'Dowd V, Dedi N, Topia S, Griffin R, Ramirez-Franco J, El Far O, Baulac S, Leite MI, Sen A, Jeans A, McMillan D, Marshall D, Anthony D, Lightwood D, Waters P, Irani SR.</strong> 
+        Gangliosides interact with synaptotagmin to form the high-affinity receptor complex for botulinum neurotoxin B
+        <em> Brain 2020.</em>
     </a></li>
+</ul>
+
+<h2>2019</h2>
+    <ul class="pub-list">
+    <li><a href="https://doi.org/10.1093/brain/awaa104" target="_blank">
+        <strong>Flores A*, Ramirez-Franco J*, Desplantes R, Debreux K, Ferracci G, Wernert F, Blanchard MP, Maulet Y, Youssouf F, Sangiardi M, Iborra C, Popoff MR, Seagar M, Fantini J, Lévêque C, El Far O.</strong> 
+        Distinctive binding properties of human monoclonal LGI1 autoantibodies determine pathogenic mechanisms. 
+        <em> Proc Natl Acad Sci U S A. 2019.</em>
+    </a><sub>*Co-first authors</sub></li>
 </ul>
 
 </body>
