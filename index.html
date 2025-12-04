@@ -3,95 +3,152 @@
 <head>
 <meta charset="UTF-8">
 <title>Jorge's Lab</title>
+
 <style>
-    @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;700&display=swap');
 
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
 
-    body {
-        height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-family: 'Roboto Mono', monospace;
-        background-image: url(https://raw.githubusercontent.com/JRamirez-F/Picture_Gallery/main/images/Image_fibers.png);
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        color: #f4f4f4;
-        text-align: center;
-        line-height: 1.6;
-        padding: 20px;
-    }
+/* ================================
+   PAGE BACKGROUND (UNCHANGED)
+================================ */
 
-    .container {
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto Mono', monospace;
+    background-image: url('images/bckground_small.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #f4f4f4;
+    text-align: center;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* ================================
+   LIQUID GLASS PANEL (DIM MODE)
+   ✅ REPLACES .container
+================================ */
+
+.container {
+    --c-light: #99deff;
+    --c-dark: #20001b;
+    --c-glass: hsl(335 250% 74% / 1);
+    --glass-reflex-dark: 2;
+    --glass-reflex-light: 0.5;
+    --saturation: 180%;
     max-width: 700px;
-    padding: 20px 40px;
-    border-radius: 51px;
-    background: rgb(14 39 129 / 20%);
-    /* backdrop-filter: blur(4px); */
-    -webkit-backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.25);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-    }
+    padding: 28px 48px;
+    border-radius: 999px;
+    background: linear-gradient(to bottom,
+ color-mix(in srgb, #28013d 25%, transparent),
+ color-mix(in srgb, hsl(124.62deg 100% 15.82%) 28%, transparent));
+    backdrop-filter: blur(1px) saturate(var(--saturation));
+    -webkit-backdrop-filter: blur(18px) saturate(var(--saturation));
+    box-shadow: inset 0 0 0 1px 
+ color-mix(in srgb, #ca99ff calc(var(--glass-reflex-light) * 12%), transparent), inset 1.5px 3px 0px -2px 
+ color-mix(in srgb, #755ac7 calc(var(--glass-reflex-light) * 90%), transparent), inset -2px -2px 0px -2px 
+ color-mix(in srgb, #1e5d6b calc(var(--glass-reflex-light) * 70%), transparent), inset -4px -7px 2px -6px 
+ color-mix(in srgb, #99ffff calc(var(--glass-reflex-light) * 50%), transparent), inset -1px 2px 4px -1px 
+ color-mix(in srgb, var(--c-dark) calc(var(--glass-reflex-dark) * 18%), transparent), 0px 14px 30px 
+ color-mix(in srgb, var(--c-dark) 32%, transparent);
+    transition: transform 0.35s 
+ease, box-shadow 0.35s 
+ease;
+/* ================================
+   TEXT (UNCHANGED)
+================================ */
 
-    h1 {
-        font-size: 3em;
-        font-weight: 700;
-        margin-bottom: 18px;
-        letter-spacing: 1px;
-    }
+h1 {
+    font-size: 3em;
+    font-weight: 700;
+    margin-bottom: 18px;
+    letter-spacing: 1px;
+}
 
-    p {
-        font-size: 1.2em;
-        margin-bottom: 6px;
-    }
+/* ================================
+   CLICKABLE SUBTITLES (HOVER ONLY COLOR)
+================================ */
 
-    p.small {
-        font-size: 1.1em;
-        opacity: 0.9;
-    }
+/* subtitle-line keeps words inline like <p> before */
+.subtitle-line {
+    display: block;   /* inline with natural spacing */
+    font-size: 1.2em; 
+    margin-bottom: 6px;
+}
 
-    
+/* smaller line */
+.subtitle-line.small {
+    font-size: 1.1em;
+    opacity: 0.9;
+}
 
-    @keyframes typing {
-        from { width: 0 }
-        to { width: 100% }
-    }
+/* spacing between words */
+.subtitle-line .subtitle {
+    margin-right: 0.6em;   /* adjust to match old spacing */
+    text-decoration: none;
+    color: #f4f4f4;
+    transition: color 0.2s ease;
+}
 
-    @keyframes blink {
-        from, to { border-color: transparent }
-        50% { border-color: #222; }
-    }
+.subtitle-line .subtitle:last-child {
+    margin-right: 0;
+}
 
-    .cta {
-        display: inline-block;
-        margin-top: 16px;
-        font-size: 1em;
-        text-decoration: none;
-        color: #91f3c7;
-        border-bottom: 2px solid #abf7d7;
-        padding-bottom: 2px;
-        transition: 0.2s;
-    }
+/* hover effect */
+.subtitle-line .subtitle:hover {
+    color: #91f3c7;
+}
 
-    .cta:hover {
-        color: #555;
-        border-color: #555;
-    }
 
-    @media (max-width: 600px) {
-        h1 { font-size: 2.2em; }
-        p { font-size: 1.4em; }
-    }
+
+.cta {
+    display: inline-block;
+    margin-top: 16px;
+    font-size: 1em;
+    text-decoration: none;
+    color: #91f3c7;
+    border-bottom: 2px solid #abf7d7;
+    padding-bottom: 2px;
+    transition: 0.2s;
+}
+
+.cta:hover {
+    color: #ffffff;
+    border-color: #ffffff;
+}
+
+@media (max-width: 600px) {
+    h1 { font-size: 2.2em; }
+    p { font-size: 1.4em; }
+}
+
 </style>
 </head>
+
 <body>
+
+    <!-- ✅ LIQUID GLASS PANEL WITH YOUR TEXT -->
     <div class="container">
-        <h1>Research Lab</h1>
-        <p >Research. People. Gallery.</p>
-        <p class="small">Publications. Code.</p>
+        <h1>Jorge Ramirez Research Lab</h1>
+
+        <p class="subtitle-line">
+          <a href="#" class="subtitle">Research.</a>
+          <a href="#" class="subtitle">People.</a>
+          <a href="#" class="subtitle">Gallery.</a>
+        </p>
+
+        <p class="subtitle-line small">
+          <a href="#" class="subtitle">Publications.</a>
+          <a href="#" class="subtitle">Code.</a>
+        </p>
+
         <a href="#" class="cta">Explore the Lab →</a>
     </div>
+
 </body>
 </html>
