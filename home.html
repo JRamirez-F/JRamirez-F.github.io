@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Jorge Ramirez – Lab</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    body { margin: 0; padding: 0; font-family: 'Roboto', sans-serif; background: #fff; color: #111; }
+    header { background: #222; color: #fff; padding: 16px 24px; display: flex; align-items: center; justify-content: space-between; }
+    header .logo { font-size: 1.4rem; font-weight: bold; }
+    nav a { color: #fff; margin-left: 16px; text-decoration: none; font-weight: 500; }
+    main {
+      background: rgba(255, 255, 255, 0.68);
+      color: #242e3b;
+      backdrop-filter: blur(2px);
+      margin: 0; /* remove extra spacing */
+      padding: 24px 16px; /* internal spacing */
+    }
+    section { margin-bottom: 48px; }
+    h1, h2, h3 { margin: 0 0 12px 0; }
+    .grid { display: grid; gap: 16px; }
+    .card { border: 1px solid #ddd; padding: 16px; border-radius: 6px; }
+    footer {
+        background: rgba(255, 255, 255, 0.68);
+        padding: 16px 24px;
+        text-align: center;
+        font-size: 0.9rem;
+        color: #0b68ad;
+    }
+
+    .hero { position: relative; height: 83vh; overflow: hidden; }
+    .hero img { 
+      position: fixed; 
+      top: 0; 
+      left: 0; 
+      width: 100%; 
+      height: auto;
+      object-fit: cover;
+      display: block; 
+      z-index: -1; 
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">Jorge Ramirez-Lab</div>
+  <nav>
+    <a href="#about">Home</a>
+    <a href="#projects">Research</a>
+    <a href="#news">News</a>
+    <a href="#team">Team</a>
+    <a href="#contact">Contact</a>
+    <a href="Gallery.html">Gallery</a>
+    <a href="publications.html">Publications</a>
+  </nav>
+</header>
+
+<!-- Hero Image -->
+<div class="hero">
+  <img src="images/Full_brain.jpg" alt="Hero Image" />
+</div>
+
+<main>
+
+  <section id="about">
+    <h1>The lab</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sed lectus lorem. Quisque tortor dui, dictum non magna in, scelerisque venenatis massa. Vivamus ac sollicitudin arcu. Pellentesque varius eget ex ut porta. Curabitur viverra enim nec erat tempor tincidunt. Fusce quis dui fermentum, ornare nisi non, iaculis mauris. Praesent ultricies vehicula tortor, condimentum suscipit ex consequat non. Proin a porta urna. Maecenas euismod odio ex. Ut tincidunt magna non feugiat accumsan. Sed id leo nec lorem finibus commodo dictum a risus. Curabitur a lacus scelerisque, eleifend ligula et, venenatis ex. Donec hendrerit felis ac turpis porta ultrices. Sed sollicitudin, lorem in tempus accumsan, elit felis mattis ex, quis tristique dolor turpis id erat. Nunc commodo lacinia mauris at tincidunt. Quisque iaculis tempus convallis. Suspendisse in ex mi. Proin nisi dolor, malesuada rutrum fermentum in, mattis sed lorem. Vivamus libero quam, tempor vitae est non, hendrerit finibus purus. Donec non viverra arcu. Sed consectetur arcu vel lectus porta efficitur. Maecenas vel eros ac purus laoreet interdum non ut orci.</p>
+  </section>
+
+  <section id="projects">
+    <h2>Projects / Research</h2>
+    <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));">
+      <div class="card">
+        <h3>Project / Topic A</h3>
+        <p>Donec quis vestibulum risus, in feugiat tellus. Nam odio nisl, mollis vel congue eget, luctus a leo. Ut volutpat risus ipsum, non aliquam nulla tempus in. Nunc eget hendrerit sapien.</p>
+      </div>
+      <div class="card">
+        <h3>Project / Topic B</h3>
+        <p>Donec quis vestibulum risus, in feugiat tellus. Nam odio nisl, mollis vel congue eget, luctus a leo. Ut volutpat risus ipsum, non aliquam nulla tempus in. Nunc eget hendrerit sapien. </p>
+      </div>
+      <div class="card">
+        <h3>Project / Topic C</h3>
+        <p>Donec quis vestibulum risus, in feugiat tellus. Nam odio nisl, mollis vel congue eget, luctus a leo. Ut volutpat risus ipsum, non aliquam nulla tempus in. Nunc eget hendrerit sapien. </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="news">
+    <h2>News & Updates</h2>
+    <ul>
+      <li><strong>Date —</strong> News item / update title</li>
+      <li><strong>Date —</strong> Another update</li>
+      <li><strong>Date —</strong> And more…</li>
+    </ul>
+  </section>
+
+  <section id="team">
+    <h2>Team & Collaborators</h2>
+    <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));">
+      <div class="card">
+        <h3>Name 1</h3>
+        <p>Role / short bio.</p>
+      </div>
+      <div class="card">
+        <h3>Name 2</h3>
+        <p>Role / short bio.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:your.email@example.com">jjramire@ucm.es</a></p>
+  </section>
+
+</main>
+
+<footer>
+  &copy; <span id="year"></span> Jorge Ramirez-Franco — All rights reserved
+</footer>
+
+<script>
+  document.getElementById('year').innerText = new Date().getFullYear();
+</script>
+
+</body>
+</html>
