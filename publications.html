@@ -1,312 +1,351 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Jorge Ramirez - Publications</title>
 
-<style>
-/* ==============================
-   GLOBAL STYLES
-============================== */
-body {
-    font-family: 'Roboto Mono', monospace;
-    background-color: #111;
-    color: #eee;
-    padding: 40px 20px;
-    line-height: 1.5;
-}
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Jorge Ramirez – Lab</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 
-h1 {
-    font-size: 2.5em;
-    margin-bottom: 40px;
-    text-align: center;
-}
+  <style>
+    
+    body { margin: 0; padding: 0; font-family: 'Roboto', sans-serif; background: #fff; color: #111; }
+    
+    header { background: #222; color: #fff; padding: 16px 24px; display: flex; align-items: center; justify-content: space-between; }
+    
+    header .logo { font-size: 1.4rem; font-weight: bold; }
+    
+    nav a { color: #fff; margin-left: 16px; text-decoration: none; font-weight: 500; }
+    
+    main {
+          background: #000000;
+          color: #aad3e7;
+          backdrop-filter: blur(2px);
+          margin: 0; /* remove extra spacing */
+          padding: 1Vh 3Vw; /* internal spacing */
+        }
 
-h2 {
-    font-size: 2em;
-    margin-top: 30px;
-    margin-bottom: 15px;
-    color: #8dcfff;
-}
-
-/* ==============================
-   PUBLICATION LIST
-============================== */
-.pub-list {
-    list-style: none;
-    padding: 0;
-    margin: 0 auto 30px auto;
-    max-width: 90%;         /* scale with screen width */
-    width: 2048px;           /* preferred width on large screens */
-}
-
-.pub-list li {
-    margin-bottom: 1.5em;
-    line-height: 1.5;
-    padding: 1em 1.2em;
-    border-radius: 8px;
-    background-color: rgba(30, 30, 30, 0.7);
-    transition: transform 0.2s ease, background-color 0.2s ease;
-}
-
-.pub-list li:hover {
-    background-color: rgba(36, 153, 211, 0.1);
-    transform: translateY(-2px);
-}
-
-.pub-list li a {
-    color: #eee;
-    text-decoration: none;
-    display: block;
-    font-size: 1em;
-}
-
-.pub-list li a:hover {
-    color: #91f3c7;
-}
-
-.pub-list li a strong {
-    color: #c5d2e3;
-}
-
-.pub-list li a em {
-    color: #ccc;
-}
-
-.pub-list li sub {
-    display: block;
-    font-size: 0.8em;
-    color: #aaa;
-    margin-top: 0.2em;
-}
-
-/* ==============================
-   RESPONSIVE
-============================== */
-@media (max-width: 768px) {
-    body {
-        padding: 20px 10px;
-    }
     h1 {
-        font-size: 2em;
+        font-size: 2.5em;
+        margin-bottom: 5Vh;
+        text-align: center;
     }
+
     h2 {
-        font-size: 1.6em;
+        font-size: 1.5em;
+        margin-top: 1Vh;
+        margin-bottom: 15px;
+        color: #8dcfff;
     }
+
+    .pub-list {
+        list-style: none;
+        padding: 0;
+        margin: 0 auto 30px auto;
+        max-width: 90Vw;         /* scale with screen width */
+        width: 2048px;           /* preferred width on large screens */
+    }
+
     .pub-list li {
-        font-size: 0.95em;
-        padding: 0.8em 1em;
+        margin-bottom: 1.5em;
+        line-height: 1.5;
+        padding: 1em 1.2em;
+        border-radius: 8px;
+        background-color: rgba(30, 30, 30, 0.7);
+        transition: transform 0.2s ease, background-color 0.2s ease;
     }
-}
-</style>
+
+    .pub-list li:hover {
+        background-color: rgba(36, 153, 211, 0.1);
+        transform: translateY(-2px);
+    }
+
+    .pub-list li a {
+        color: #eee;
+        text-decoration: none;
+        display: block;
+        font-size: 0.85em;
+    }
+
+    .pub-list li a:hover {
+        color: #91f3c7;
+    }
+
+    .pub-list li a strong {
+        color: #c5d2e3;
+    }
+
+    .pub-list li a em {
+        color: #ccc;
+    }
+
+    .pub-list li sub {
+        display: block;
+        font-size: 0.8em;
+        color: #aaa;
+        margin-top: 0.2em;
+    }
+
+    @media (max-width: 768px) {
+        body {
+            padding: 20px 10px;
+        }
+        h1 {
+            font-size: 2em;
+        }
+        h2 {
+            font-size: 1.6em;
+        }
+        .pub-list li {
+            font-size: 0.95em;
+            padding: 0.8em 1em;
+        }
+    }
+
+    footer {
+        background: rgba(0, 0, 0);
+        padding: 16px 24px;
+        text-align: center;
+        font-size: 0.9rem;
+        color: #9ac0dd;
+    }
+
+  </style>
 </head>
-
 <body>
-<h1>Publications</h1>
 
-<h2>2025</h2>
-<ul class="pub-list">
-    <li><a href="https://doi.org/10.1101/2025.10.29.685130" target="_blank">
-       <strong>Ramirez-Franco J, Debreux K, Sangiardi M, Belghazi M, Lévêque C, Seagar M, El Far O.</strong> 
-       A hyperglycosylated form of Kv1.2 upregulated in LGI1 knockout mice.
-       <em>bioRxiv 2025.</em>
-    </a></li>
-    
-   <li><a href="https://doi.org/10.1038/s42003-025-08559-x" target="_blank">
-        <strong>Crozat E*, Blasco E*, Ramirez-Franco J*, Riondel P, Jurčić N, Seddik R, Michelle C, Trouslard J, Wanaverbecq N</strong>. 
-        Cerebrospinal fluid-contacting neurons are sensory neurons with uniform morphological and region-specific electrophysiological properties in the mouse spinal cord. 
-        <em>Commun Biol 2025.</em>
-    </a><sub>*Co-first authors</sub></li>
-    
-   <li><a href="https://doi.org/10.1093/brain/awaf147" target="_blank">
-        <strong>Barbay T, Pecchi E, Ramirez-Franco J, Ivanov A, Brocard F, Rouach N, Bos R</strong>. 
-        Functional contribution of astrocytic Kir4.1 channels to spasticity after spinal cord injury. 
-        <em>Brain 2025.</em>
-    </a></li>
+<header>
+  <div class="logo">Jorge Ramirez-Lab</div>
+  <nav>
+    <a href="home.html">Home</a>
+    <a href="home.html#projects">Research</a>
+    <a href="home.html#news">News</a>
+    <a href="home.html#team">Team</a>
+    <a href="home.html#contact">Contact</a>
+    <a href="Gallery.html">Gallery</a>
+    <a href="publications.html">Publications</a>
+  </nav>
+</header>
 
-    <li><a href="https://doi.org/10.3389/fnana.2025.1652848" target="_blank">
-        <strong>Leblond L, Ramirez-Franco J, Michelle C, Wanaverbecq N, Evin M</strong>. 
-        Spinal cord morphology and PKD2L1<sup>+</sup> cells distribution: effects of age, sex, and spinal segment in mice. 
-        <em>Front Neuroanat 2025.</em>
-    </a></li>
 
-</ul>
+<main>
+  <h1>Publications</h1>
 
-<h2>2024</h2>
-<ul class="pub-list">
-    <li><a href="https://doi.org/10.1016/j.nbd.2024.106513" target="_blank">
-        <strong> Ramirez-Franco J ✉, Debreux K, Sangiardi M, Belghazi M, Kim Y, Lee SH, Lévêque C, Seagar M, El Far O ✉.</strong> 
-        The downregulation of Kv1 channels in Lgi1<sup>-/-</sup> mice is accompanied by a profound modification of its interactome and a parallel decrease in Kv2 channels. 
-        <em>Neurobiol Dis 2024.</em>
-    </a><sub>✉ Co-corresponding authors</sub></li>
-   
-   <li><a href="https://doi.org/10.1101/2024.12.02.626379" target="_blank">
-        <strong>Leana-Sandoval G, Kolli AV, Sandoval MA, Saavedra E, Li KH, Chen LY, Burlingame AL, Ramírez-Franco J, Díaz-Alonso J</strong>. 
-        The VGCC auxiliary subunit α2δ1 is an extracellular GluA1 interactor and regulates LTP, spatial memory, and seizure susceptibility. 
-        <em>bioRxiv [Preprint] 2024.</em>
-    </a></li>
-   
-   <li><a href="https://doi.org/10.1038/s42003-023-05441-6" target="_blank">
-        <strong>Riondel P, Jurčić N, Mounien L, Ibrahim S, Ramirez-Franco J, Stefanovic S, Trouslard J, Wanaverbecq N, Seddik R.</strong> 
-        Evidence for Two Subpopulations of Cerebrospinal Fluid-Contacting Neurons with Opposite GABAergic Signaling in Adult Mouse Spinal Cord.
-        <em>J Neurosci. 2024.</em>
-    </a></li>
+  <h2>2025</h2>
+  <ul class="pub-list">
+      <li><a href="https://doi.org/10.1101/2025.10.29.685130" target="_blank">
+         <strong>Ramirez-Franco J, Debreux K, Sangiardi M, Belghazi M, Lévêque C, Seagar M, El Far O.</strong> 
+         A hyperglycosylated form of Kv1.2 upregulated in LGI1 knockout mice.
+         <em>bioRxiv 2025.</em>
+      </a></li>
+      
+     <li><a href="https://doi.org/10.1038/s42003-025-08559-x" target="_blank">
+          <strong>Crozat E*, Blasco E*, Ramirez-Franco J*, Riondel P, Jurčić N, Seddik R, Michelle C, Trouslard J, Wanaverbecq N.</strong> 
+          Cerebrospinal fluid-contacting neurons are sensory neurons with uniform morphological and region-specific electrophysiological properties in the mouse spinal cord. 
+          <em>Commun Biol 2025.</em>
+      </a><sub>*Co-first authors</sub></li>
+      
+     <li><a href="https://doi.org/10.1093/brain/awaf147" target="_blank">
+          <strong>Barbay T, Pecchi E, Ramirez-Franco J, Ivanov A, Brocard F, Rouach N, Bos R.</strong>.
+          Functional contribution of astrocytic Kir4.1 channels to spasticity after spinal cord injury. 
+          <em>Brain 2025.</em>
+      </a></li>
 
-    <li><a href="https://doi.org/10.1016/j.ymthe.2024.01.029" target="_blank">
-        <strong>Kerzonkuf M, Verneuil J, Brocard C, Dingu N, Trouplin V, Ramirez Franco JJ, Bartoli M, Brocard F, Bras H.</strong> 
-        Knockdown of calpain1 in lumbar motoneurons reduces spasticity after spinal cord injury in adult rats. 
-        <em>Mol Ther. 2024.</em>
-    </a></li>
-    </ul>
+      <li><a href="https://doi.org/10.3389/fnana.2025.1652848" target="_blank">
+          <strong>Leblond L, Ramirez-Franco J, Michelle C, Wanaverbecq N, Evin M.</strong>
+          Spinal cord morphology and PKD2L1<sup>+</sup> cells distribution: effects of age, sex, and spinal segment in mice. 
+          <em>Front Neuroanat 2025.</em>
+      </a></li>
 
-<h2>2023</h2>
-<ul class="pub-list">
-    <li><a href="https://doi.org/10.1523/JNEUROSCI.0701-23.2023" target="_blank">
-       <strong>Extrémet J, Ramirez-Franco J, Fronzaroli-Molinieres L, Boumedine-Guignon N, Ankri N, El Far O, Garrido JJ, Debanne D, Russier M</strong>. 
-       Rescue of Normal Excitability in LGI1-Deficient Epileptic Neurons. 
-       <em>J Neurosci 2023.</em>
-    </a></li>
+  </ul>
 
-    <li><a href="https://doi.org/10.1038/s42003-023-05441-6" target="_blank">
-        <strong>Burkert N, Roy S, Häusler M, Wuttke D, Müller S, Wiemer J, Hollmann H, Oldrati M, Ramirez-Franco J, Benkert J, Fauler M, Duda J, Goaillard JM, Pötschke C, Münchmeyer M, Parlato R, Liss B.</strong>. 
-        Deep learning-based image analysis identifies a DAT-negative subpopulation of dopaminergic neurons in the lateral Substantia nigra. 
-        <em>Commun Biol 2023.</em>
-    </a></li>
-</ul>
+  <h2>2024</h2>
+  <ul class="pub-list">
+      <li><a href="https://doi.org/10.1016/j.nbd.2024.106513" target="_blank">
+          <strong> Ramirez-Franco J ✉, Debreux K, Sangiardi M, Belghazi M, Kim Y, Lee SH, Lévêque C, Seagar M, El Far O ✉.</strong> 
+          The downregulation of Kv1 channels in <i>Lgi1</i><sup>-/-</sup> mice is accompanied by a profound modification of its interactome and a parallel decrease in Kv2 channels. 
+          <em>Neurobiol Dis 2024.</em>
+      </a><sub>✉ Co-corresponding authors</sub></li>
+     
+     <li><a href="https://doi.org/10.1101/2024.12.02.626379" target="_blank">
+          <strong>Leana-Sandoval G, Kolli AV, Sandoval MA, Saavedra E, Li KH, Chen LY, Burlingame AL, Ramírez-Franco J, Díaz-Alonso J.</strong> 
+          The VGCC auxiliary subunit α2δ1 is an extracellular GluA1 interactor and regulates LTP, spatial memory, and seizure susceptibility. 
+          <em>bioRxiv [Preprint] 2024.</em>
+      </a></li>
+     
+     <li><a href="https://doi.org/10.1038/s42003-023-05441-6" target="_blank">
+          <strong>Riondel P, Jurčić N, Mounien L, Ibrahim S, Ramirez-Franco J, Stefanovic S, Trouslard J, Wanaverbecq N, Seddik R.</strong> 
+          Evidence for Two Subpopulations of Cerebrospinal Fluid-Contacting Neurons with Opposite GABAergic Signaling in Adult Mouse Spinal Cord.
+          <em>J Neurosci. 2024.</em>
+      </a></li>
 
-<h2>2022</h2>
-<ul class="pub-list">
-    <li><a href="https://doi.org/10.1093/brain/awac218" target="_blank">
-       <strong>Ramirez-Franco J, Debreux K, Extremet J, Maulet Y, Belghazi M, Villard C, Sangiardi M, Youssouf F, El Far L, Lévêque C, Debarnot C, Marchot P, Paneva S, Debanne D, Russier M, Seagar M, Irani SR, El Far O</strong>. 
-       Patient-derived antibodies reveal the subcellular distribution and heterogeneous interactome of LGI1. 
-       <em>Brain 2022.</em>
-    </a></li>
+      <li><a href="https://doi.org/10.1016/j.ymthe.2024.01.029" target="_blank">
+          <strong>Kerzonkuf M, Verneuil J, Brocard C, Dingu N, Trouplin V, Ramirez Franco JJ, Bartoli M, Brocard F, Bras H.</strong> 
+          Knockdown of calpain1 in lumbar motoneurons reduces spasticity after spinal cord injury in adult rats. 
+          <em>Mol Ther. 2024.</em>
+      </a></li>
+      </ul>
 
-    <li><a href="https://doi.org/10.1016/10.1007/s00018-022-04527-4" target="_blank">
-        <strong>Ramirez-Franco J, Azzaz F, Sangiardi M, Ferracci G, Youssouf F, Popoff MR, Seagar M, Lévêque C, Fantini J, El Far O</strong>. 
-        Molecular landscape of BoNT/B bound to a membrane-inserted synaptotagmin/ganglioside complex. 
-        <em>Cell Mol Life Sci 2022.</em>
-    </a></li>
-</ul>
+  <h2>2023</h2>
+  <ul class="pub-list">
+      <li><a href="https://doi.org/10.1523/JNEUROSCI.0701-23.2023" target="_blank">
+         <strong>Extrémet J, Ramirez-Franco J, Fronzaroli-Molinieres L, Boumedine-Guignon N, Ankri N, El Far O, Garrido JJ, Debanne D, Russier M.</strong> 
+         Rescue of Normal Excitability in LGI1-Deficient Epileptic Neurons. 
+         <em>J Neurosci 2023.</em>
+      </a></li>
 
-<h2>2021</h2>
-    <ul class="pub-list">
-    <li><a href="https://doi.org/10.1523/ENEURO.0207-21.2021" target="_blank">
-        <strong>Haddjeri-Hopkins A, Tapia M, Ramirez-Franco J, Tell F, Marqueze-Pouey B, Amalric M, Goaillard JM.</strong>
-        Refining the Identity and Role of Kv4 Channels in Mouse Substantia Nigra Dopaminergic Neurons. 
-        <em>eNeuro 2021.</em>
-    </a></li>
-</ul>
+      <li><a href="https://doi.org/10.1038/s42003-023-05441-6" target="_blank">
+          <strong>Burkert N, Roy S, Häusler M, Wuttke D, Müller S, Wiemer J, Hollmann H, Oldrati M, Ramirez-Franco J, Benkert J, Fauler M, Duda J, Goaillard JM, Pötschke C, Münchmeyer M, Parlato R, Liss B.</strong> 
+          Deep learning-based image analysis identifies a DAT-negative subpopulation of dopaminergic neurons in the lateral Substantia nigra. 
+          <em>Commun Biol 2023.</em>
+      </a></li>
+  </ul>
 
-<h2>2020</h2>
-    <ul class="pub-list">
-    <li><a href="https://doi.org/10.1093/brain/awaa104" target="_blank">
-        <strong>Ramberger M, Berretta A, Tan JMM, Sun B, Michael S, Yeo T, Theorell J, Bashford-Rogers R, Paneva S, O'Dowd V, Dedi N, Topia S, Griffin R, Ramirez-Franco J, El Far O, Baulac S, Leite MI, Sen A, Jeans A, McMillan D, Marshall D, Anthony D, Lightwood D, Waters P, Irani SR.</strong> 
-        Gangliosides interact with synaptotagmin to form the high-affinity receptor complex for botulinum neurotoxin B.
-        <em> Brain 2020.</em>
-    </a></li>
-</ul>
+  <h2>2022</h2>
+  <ul class="pub-list">
+      <li><a href="https://doi.org/10.1093/brain/awac218" target="_blank">
+         <strong>Ramirez-Franco J, Debreux K, Extremet J, Maulet Y, Belghazi M, Villard C, Sangiardi M, Youssouf F, El Far L, Lévêque C, Debarnot C, Marchot P, Paneva S, Debanne D, Russier M, Seagar M, Irani SR, El Far O.</strong>
+         Patient-derived antibodies reveal the subcellular distribution and heterogeneous interactome of LGI1. 
+         <em>Brain 2022.</em>
+      </a></li>
 
-<h2>2019</h2>
-    <ul class="pub-list">
-    <li><a href="https://doi.org/10.1073/pnas.1908051116" target="_blank">
-        <strong>Flores A*, Ramirez-Franco J*, Desplantes R, Debreux K, Ferracci G, Wernert F, Blanchard MP, Maulet Y, Youssouf F, Sangiardi M, Iborra C, Popoff MR, Seagar M, Fantini J, Lévêque C, El Far O.</strong> 
-        Distinctive binding properties of human monoclonal LGI1 autoantibodies determine pathogenic mechanisms. 
-        <em> Proc Natl Acad Sci U S A. 2019.</em>
-    </a><sub>*Co-first authors</sub></li>
-       
-    <li><a href="https://doi.org/10.1002/glia.23580" target="_blank">
-        <strong>Mederos S*, Hernández-Vivanco A*, Ramírez-Franco J, Martín-Fernández M, Navarrete M, Yang A, Boyden ES, Perea G.</strong> 
-        Melanopsin for precise optogenetic activation of astrocyte-neuron networks. 
-        <em> Glia 2019.</em>
-   </a></li>
-</ul>
+      <li><a href="https://doi.org/10.1016/10.1007/s00018-022-04527-4" target="_blank">
+          <strong>Ramirez-Franco J, Azzaz F, Sangiardi M, Ferracci G, Youssouf F, Popoff MR, Seagar M, Lévêque C, Fantini J, El Far O.</strong>. 
+          Molecular landscape of BoNT/B bound to a membrane-inserted synaptotagmin/ganglioside complex. 
+          <em>Cell Mol Life Sci 2022.</em>
+      </a></li>
+  </ul>
 
-<h2>2017</h2>
-    <ul class="pub-list">
-    <li><a href="https://doi.org/10.1111/jnc.14059" target="_blank">
-        <strong>Alonso B, Bartolomé-Martín D, Ferrero JJ, Ramírez-Franco J, Torres M, Sánchez-Prieto J.</strong> 
-        CB1 receptors down-regulate a cAMP/Epac2/PLC pathway to silence the nerve terminals of cerebellar granule cells.
-        <em>J Neurochem 2017.</em>
-    </a></li>
-    </ul>
+  <h2>2021</h2>
+      <ul class="pub-list">
+      <li><a href="https://doi.org/10.1523/ENEURO.0207-21.2021" target="_blank">
+          <strong>Haddjeri-Hopkins A, Tapia M, Ramirez-Franco J, Tell F, Marqueze-Pouey B, Amalric M, Goaillard JM.</strong>
+          Refining the Identity and Role of Kv4 Channels in Mouse Substantia Nigra Dopaminergic Neurons. 
+          <em>eNeuro 2021.</em>
+      </a></li>
+  </ul>
 
-<h2>2016</h2>
-    <ul class="pub-list">
-    <li><a href="https://doi.org/10.3389/fncel.2016.00202" target="_blank">
-        <strong>Ramírez-Franco J, Munoz-Cuevas FJ, Luján R, Jurado S.</strong> 
-        Excitatory and Inhibitory Neurons in the Hippocampus Exhibit Molecularly Distinct Large Dense Core Vesicles.
-        <em>Front Cell Neurosci 2016.</em>
-    </a></li>
-</ul>
+  <h2>2020</h2>
+      <ul class="pub-list">
+      <li><a href="https://doi.org/10.1093/brain/awaa104" target="_blank">
+          <strong>Ramberger M, Berretta A, Tan JMM, Sun B, Michael S, Yeo T, Theorell J, Bashford-Rogers R, Paneva S, O'Dowd V, Dedi N, Topia S, Griffin R, Ramirez-Franco J, El Far O, Baulac S, Leite MI, Sen A, Jeans A, McMillan D, Marshall D, Anthony D, Lightwood D, Waters P, Irani SR.</strong> 
+          Distinctive binding properties of human monoclonal LGI1 autoantibodies determine pathogenic mechanisms.
+          <em> Brain 2020.</em>
+      </a></li>
+  </ul>
 
-    <ul class="pub-list">
-    <li><a href="https://doi.org/10.1016/j.neuropharm.2015.07.025" target="_blank">
-        <strong>Ferrero JJ, Ramírez-Franco J, Martín R, Bartolomé-Martín D, Torres M, Sánchez-Prieto J.</strong> 
-        Cross-talk between metabotropic glutamate receptor 7 and β-adrenergic receptor signaling at cerebrocortical nerve terminals.
-        <em>Neuropharmacology 2016</em>
-    </a></li>
-</ul>
-   
-<h2>2014</h2>
-    <ul class="pub-list">
-    <li><a href="https://doi.org/10.1371/journal.pone.0088594" target="_blank">
-        <strong>Ramírez-Franco J, Bartolomé-Martín D, Alonso B, Torres M, Sánchez-Prieto J.</strong> 
-        Cannabinoid type 1 receptors transiently silence glutamatergic nerve terminals of cultured cerebellar granule cells.
-        <em>PLoS One 2014</em>
-    </a></li>
-</ul>
-   
-   <ul class="pub-list">
-    <li><a href="https://doi.org/10.1523/JNEUROSCI.0103-14.2014" target="_blank">
-        <strong>Collado-Alsina A, Ramírez-Franco J, Sánchez-Prieto J, Torres M.</strong> 
-        The regulation of synaptic vesicle recycling by cGMP-dependent protein kinase type II in cerebellar granule cells under strong and sustained stimulation
-        <em>J Neurosci 2014.</em>
-    </a></li>
-</ul>
-   
-<h2>2013</h2>
-    <ul class="pub-list">
-    <li><a href="https://doi.org/10.1186/1471-2202-14-127" target="_blank">
-        <strong>Ramírez-Franco J, Alonso B, Bartolomé-Martín D, Sánchez-Prieto J, Torres M.</strong> 
-        Studying synaptic efficiency by post-hoc immunolabelling.
-        <em>BMC Neurosci 2013</em>
-    </a></li>
-    </ul>
-   
-    <ul class="pub-list">
-    <li><a href="https://doi.org/10.1074/jbc.M113.463877" target="_blank">
-        <strong>Ferrero JJ, Alvarez AM, Ramírez-Franco J, Godino MC, Bartolomé-Martín D, Aguado C, Torres M, Luján R, Ciruela F, Sánchez-Prieto J.</strong> 
-        β-Adrenergic receptors activate exchange protein directly activated by cAMP (Epac), translocate Munc13-1, and enhance the Rab3A-RIM1α interaction to potentiate glutamate release at cerebrocortical nerve terminals.
-        <em>J Biol Chem 2013.</em>
-    </a></li>
-    </ul>
-   
-<h2>2012</h2>
-    <ul class="pub-list">
-    <li><a href="https://doi.org/10.1242/jcs.090878" target="_blank">
-        <strong>Bartolomé-Martín D*, Ramírez-Franco J*, Castro E, Sánchez-Prieto J, Torres M.</strong> 
-        Efficient synaptic vesicle recycling after intense exocytosis concomitant with the accumulation of non-releasable endosomes at early developmental stages.
-        <em>J Cell Sci 2012.</em>
-        </a><sub>*Co-first authors</sub></li>       
-    </ul>
-   
-    <ul class="pub-list">
-    <li><a href="https://doi.org/10.1016/j.neuint.2012.04.007" target="_blank">
-        <strong>Hurtado O, Ballesteros I, Cuartero MI, Moraga A, Pradillo JM, Ramírez-Franco J, Bartolomé-Martín D, Pascual D, Torres M, Sánchez-Prieto J, Salom JB, Lizasoain I, Moro MA.</strong> 
-        Daidzein has neuroprotective effects through ligand- binding-independent PPARγ activation
-        <em>Neurochem Int 2012.</em>
-    </a></li>
-</ul>
-   
-<h2>2011</h2>
-    <ul class="pub-list">
-    <li><a href="https://doi.org/10.1016/j.bbamcr.2010.10.016" target="_blank">
-        <strong>Incontro S, Ramírez-Franco J, Sánchez-Prieto J, Torres M.</strong> 
-        Membrane depolarization regulates AMPA receptor subunit expression in cerebellar granule cells in culture.
-       <em>Biochim Biophys Acta 2011.</em>
-       </a></li>       
-    </ul>
+  <h2>2019</h2>
+      <ul class="pub-list">
+      <li><a href="https://doi.org/10.1073/pnas.1908051116" target="_blank">
+          <strong>Flores A*, Ramirez-Franco J*, Desplantes R, Debreux K, Ferracci G, Wernert F, Blanchard MP, Maulet Y, Youssouf F, Sangiardi M, Iborra C, Popoff MR, Seagar M, Fantini J, Lévêque C, El Far O.</strong> 
+          Gangliosides interact with synaptotagmin to form the high-affinity receptor complex for botulinum neurotoxin B. 
+          <em> Proc Natl Acad Sci U S A. 2019.</em>
+      </a><sub>*Co-first authors</sub></li>
+         
+      <li><a href="https://doi.org/10.1002/glia.23580" target="_blank">
+          <strong>Mederos S*, Hernández-Vivanco A*, Ramírez-Franco J, Martín-Fernández M, Navarrete M, Yang A, Boyden ES, Perea G.</strong> 
+          Melanopsin for precise optogenetic activation of astrocyte-neuron networks. 
+          <em> Glia 2019.</em>
+     </a></li>
+  </ul>
+
+  <h2>2017</h2>
+      <ul class="pub-list">
+      <li><a href="https://doi.org/10.1111/jnc.14059" target="_blank">
+          <strong>Alonso B, Bartolomé-Martín D, Ferrero JJ, Ramírez-Franco J, Torres M, Sánchez-Prieto J.</strong> 
+          CB1 receptors down-regulate a cAMP/Epac2/PLC pathway to silence the nerve terminals of cerebellar granule cells.
+          <em>J Neurochem 2017.</em>
+      </a></li>
+      </ul>
+
+  <h2>2016</h2>
+      <ul class="pub-list">
+      <li><a href="https://doi.org/10.3389/fncel.2016.00202" target="_blank">
+          <strong>Ramírez-Franco J, Munoz-Cuevas FJ, Luján R, Jurado S.</strong> 
+          Excitatory and Inhibitory Neurons in the Hippocampus Exhibit Molecularly Distinct Large Dense Core Vesicles.
+          <em>Front Cell Neurosci 2016.</em>
+      </a></li>
+  </ul>
+
+      <ul class="pub-list">
+      <li><a href="https://doi.org/10.1016/j.neuropharm.2015.07.025" target="_blank">
+          <strong>Ferrero JJ, Ramírez-Franco J, Martín R, Bartolomé-Martín D, Torres M, Sánchez-Prieto J.</strong> 
+          Cross-talk between metabotropic glutamate receptor 7 and β-adrenergic receptor signaling at cerebrocortical nerve terminals.
+          <em>Neuropharmacology 2016</em>
+      </a></li>
+  </ul>
+     
+  <h2>2014</h2>
+      <ul class="pub-list">
+      <li><a href="https://doi.org/10.1371/journal.pone.0088594" target="_blank">
+          <strong>Ramírez-Franco J, Bartolomé-Martín D, Alonso B, Torres M, Sánchez-Prieto J.</strong> 
+          Cannabinoid type 1 receptors transiently silence glutamatergic nerve terminals of cultured cerebellar granule cells.
+          <em>PLoS One 2014</em>
+      </a></li>
+  </ul>
+     
+     <ul class="pub-list">
+      <li><a href="https://doi.org/10.1523/JNEUROSCI.0103-14.2014" target="_blank">
+          <strong>Collado-Alsina A, Ramírez-Franco J, Sánchez-Prieto J, Torres M.</strong> 
+          The regulation of synaptic vesicle recycling by cGMP-dependent protein kinase type II in cerebellar granule cells under strong and sustained stimulation
+          <em>J Neurosci 2014.</em>
+      </a></li>
+  </ul>
+     
+  <h2>2013</h2>
+      <ul class="pub-list">
+      <li><a href="https://doi.org/10.1186/1471-2202-14-127" target="_blank">
+          <strong>Ramírez-Franco J, Alonso B, Bartolomé-Martín D, Sánchez-Prieto J, Torres M.</strong> 
+          Studying synaptic efficiency by post-hoc immunolabelling.
+          <em>BMC Neurosci 2013</em>
+      </a></li>
+      </ul>
+     
+      <ul class="pub-list">
+      <li><a href="https://doi.org/10.1074/jbc.M113.463877" target="_blank">
+          <strong>Ferrero JJ, Alvarez AM, Ramírez-Franco J, Godino MC, Bartolomé-Martín D, Aguado C, Torres M, Luján R, Ciruela F, Sánchez-Prieto J.</strong> 
+          β-Adrenergic receptors activate exchange protein directly activated by cAMP (Epac), translocate Munc13-1, and enhance the Rab3A-RIM1α interaction to potentiate glutamate release at cerebrocortical nerve terminals.
+          <em>J Biol Chem 2013.</em>
+      </a></li>
+      </ul>
+     
+  <h2>2012</h2>
+      <ul class="pub-list">
+      <li><a href="https://doi.org/10.1242/jcs.090878" target="_blank">
+          <strong>Bartolomé-Martín D*, Ramírez-Franco J*, Castro E, Sánchez-Prieto J, Torres M.</strong> 
+          Efficient synaptic vesicle recycling after intense exocytosis concomitant with the accumulation of non-releasable endosomes at early developmental stages.
+          <em>J Cell Sci 2012.</em>
+          </a><sub>*Co-first authors</sub></li>       
+      </ul>
+     
+      <ul class="pub-list">
+      <li><a href="https://doi.org/10.1016/j.neuint.2012.04.007" target="_blank">
+          <strong>Hurtado O, Ballesteros I, Cuartero MI, Moraga A, Pradillo JM, Ramírez-Franco J, Bartolomé-Martín D, Pascual D, Torres M, Sánchez-Prieto J, Salom JB, Lizasoain I, Moro MA.</strong> 
+          Daidzein has neuroprotective effects through ligand- binding-independent PPARγ activation
+          <em>Neurochem Int 2012.</em>
+      </a></li>
+  </ul>
+     
+  <h2>2011</h2>
+      <ul class="pub-list">
+      <li><a href="https://doi.org/10.1016/j.bbamcr.2010.10.016" target="_blank">
+          <strong>Incontro S, Ramírez-Franco J, Sánchez-Prieto J, Torres M.</strong> 
+          Membrane depolarization regulates AMPA receptor subunit expression in cerebellar granule cells in culture.
+         <em>Biochim Biophys Acta 2011.</em>
+         </a></li>       
+      </ul>
+
+</main>
+
+<footer>
+  &copy; <span id="year"></span> Jorge Ramirez-Franco — All rights reserved
+</footer>
+
+<script>
+  document.getElementById('year').innerText = new Date().getFullYear();
+</script>
 
 </body>
 </html>
