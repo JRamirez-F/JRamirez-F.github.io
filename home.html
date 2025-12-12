@@ -52,6 +52,36 @@
       display: block; 
       z-index: -1; 
     }
+
+    .contact-list {
+      list-style: none;
+      padding: 0;
+      margin-top: 16px;
+    }
+
+    .contact-list li {
+      display: flex;
+      align-items: center;
+      margin-bottom: 12px;
+    }
+
+    .contact-list img {
+      width: 22px;
+      height: 22px;
+      filter: grayscale(100%) brightness(0); /* black & white icons */
+      margin-right: 10px;
+    }
+
+    .contact-list a {
+      color: #0b68ad;
+      font-weight: 500;
+      text-decoration: none;
+    }
+
+    .contact-list a:hover {
+      text-decoration: underline;
+    }
+
   </style>
 </head>
 <body>
@@ -113,8 +143,10 @@
   <section id="news">
     <h2>News & Updates</h2>
     <ul>
-      <li><strong>Date —</strong> News item / update title</li>
+      <li><p><strong>13/10/2025</strong> The Lipid Brain Atlas is out! Researchers at the EPFL have revealed that lipids act as anatomical zip codes, uncovering lipid-defined brain territories (“Lipizones”) and unprecedented metabolic and cellular organization across the mouse brain. Check the <a href="https://www.biorxiv.org/content/10.1101/2025.10.13.682018v1" target="_blank">preprint</a> and explore the <a href="https://lbae-v2.epfl.ch/" target="_blank">Lipizones Atlas!</p></a></li>
+
       <li><strong>Date —</strong> Another update</li>
+
       <li><strong>Date —</strong> And more…</li>
     </ul>
   </section>
@@ -135,8 +167,46 @@
 
   <section id="contact">
     <h2>Contact</h2>
-    <p>Email: <a href="mailto:your.email@example.com">jjramire@ucm.es</a></p>
+
+
+    <ul class="contact-list">
+      <li>
+        <img src="icons/map.svg" alt="Map icon">
+        <a href="https://maps.app.goo.gl/69v3gfByH2jE65S56" target="_blank">Find us here</a>
+      </li>
+
+      <li>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3601.789524891857!2d-3.7250597203192353!3d40.443943839476184!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd422970dd08f051%3A0xcdf057712d377c53!2sFaculty%20of%20Medicine!5e1!3m2!1sen!2sfr!4v1765550410127!5m2!1sen!2sfr" width="200" height="150" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </li>
+
+      <li>
+        <img src="icons/mail.svg" alt="Mail icon">
+        <a href="mailto:jjramire@ucm.es">jjramire@ucm.es</a>
+      </li>
+
+      <li>
+        <img src="icons/linkedin.svg" alt="LinkedIn icon">
+        <a href="https://www.linkedin.com/in/jorge-ramirez-franco-6709a5113" target="_blank">LinkedIn</a>
+      </li>
+
+      <li>
+        <img src="icons/github.svg" alt="GitHub icon">
+        <a href="https://github.com/JRamirez-F" target="_blank">GitHub</a>
+      </li>
+
+      <li>
+        <img src="icons/RG.svg" alt="ResearchGate icon">
+        <a href="https://www.researchgate.net/profile/J-Ramirez-Franco" target="_blank">ResearchGate</a>
+      </li>
+
+      <li>
+        <img src="icons/image_sc.png" alt="Image.sc icon">
+        <a href="https://forum.image.sc/u/j_ramirez/summary" target="_blank">Image.sc</a>
+      </li>
+
+    </ul>
   </section>
+
 
 </main>
 
