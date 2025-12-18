@@ -41,17 +41,23 @@
     text-justify: inter-word;
   }
 
-    .hero { position: relative; height: 83vh; overflow: hidden; }
-    .hero img { 
-      position: fixed; 
-      top: 0; 
-      left: 0; 
-      width: 100%; 
-      height: auto;
-      object-fit: cover;
-      display: block; 
-      z-index: -1; 
-    }
+  .hero { 
+    position: relative; 
+    height: 70vh; 
+    overflow: hidden; 
+  }
+
+  .hero img { 
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: auto;
+    object-fit: cover;
+    display: block; 
+    z-index: -1; 
+  }
+
 
     .research-img {
       width: 200px;  /* fixed width */
@@ -111,6 +117,22 @@
     .contact-list a:hover {
       text-decoration: underline;
     }
+
+    @media (min-width: 1024px) {
+      .hero { 
+      position: relative; 
+      height: 85vh; 
+      overflow: hidden; 
+      }
+
+      .hero img {
+      position: fixed;
+      height: auto;
+      min-height: 100%;
+      width: 100%;
+       }
+    }
+
 
   </style>
 </head>
@@ -178,7 +200,7 @@
         <p>At the spinal level, CSF-cNs modulate segment-specific motor circuits. Work in zebrafish and mammals shows that they influence locomotion, posture, and skilled motor behaviors through defined connections with interneurons and motor neurons, positioning them as key modulators of spinal motor output.</p>
         <p>Importantly, CSF-cNs also project to supraspinal centers involved in autonomic and interoceptive control, including the nucleus of the tractus solitarius and the dorsal motor nucleus of the vagus. Together with their sensory properties, these connections support the hypothesis that CSF-cNs form a central interoceptive system linking cerebrospinal fluid signals to autonomic regulation, motor control, and adaptive behavior. Defining the connectivity of CSF-cNs across the neuraxis is therefore essential to understand how internal physiological states are integrated within the CNS.</p>
 
-        <img src="images/csfcns_thumbn.png" alt="BoNTB-SYT complex" class="research-img-csfcns">
+        <img src="images/csfcns_thumbn.png" alt="CSF-cNs" class="research-img-csfcns">
       </div>
     </div>
   </section>
