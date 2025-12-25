@@ -12,6 +12,29 @@
     header { background: #222; color: #fff; padding: 16px 24px; display: flex; align-items: center; justify-content: space-between; }
     header .logo { font-size: 1.4rem; font-weight: bold; }
     nav a { color: #fff; margin-left: 16px; text-decoration: none; font-weight: 500; }
+
+    /* Mobile adjustments */
+@media (max-width: 768px) {
+  header {
+    padding: 8px 12px;       /* smaller padding */
+    font-size: 0.9rem;       /* reduce text size */
+    flex-direction: column;   /* stack logo + nav if needed */
+    align-items: flex-start;  /* left align for smaller screens */
+  }
+
+  header .logo {
+    font-size: 1.2rem;        /* smaller logo */
+    margin-bottom: 4px;       /* spacing to nav */
+  }
+
+  nav a {
+    margin-left: 0;           /* remove left margin for stacked links */
+    margin-right: 12px;       /* small spacing between links */
+    display: inline-block;
+    margin-bottom: 4px;       /* vertical spacing for links */
+  }
+}
+    
     main {
       background: rgb(251, 251, 251);
       color: #242e3b;
