@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
   <style>
-    body { margin: 0; padding: 0; font-family: 'Roboto', sans-serif; background: #fff; color: #111; }
+    body { margin: 0; padding: 0; font-family: 'Roboto', sans-serif; background: #222; color: #111; }
     header { background: #222; color: #fff; padding: 16px 24px; display: flex; align-items: center; justify-content: space-between; }
     header .logo { font-size: 1.4rem; font-weight: bold; }
     nav a { color: #fff; margin-left: 16px; text-decoration: none; font-weight: 500; }
@@ -113,7 +113,13 @@
       text-decoration: underline;
     }
 
-
+@media (max-width: 768px) {
+  .hero img {
+    position: relative; /* instead of fixed */
+    height: auto;
+    min-height: 200px; /* or whatever fits nicely */
+  }
+}
     @media (max-width: 768px) {
   #about p,
   #projects p {
