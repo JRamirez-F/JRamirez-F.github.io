@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Interactive neuroscience and physiology simulations, visualizations, and teaching materials." />
+  <meta name="theme-color" content="#000000" />
+  <title>Education | Jorge Ramirez – Lab</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root { color-scheme: dark; --blue: #8dcfff; --soft: #aad3e7; --mint: #91f3c7; --panel: rgba(30,30,30,.85); }
+    *, *::before, *::after { box-sizing: border-box; }
+    body { margin: 0; font-family: 'Roboto', sans-serif; background: #000; color: var(--soft); }
+    a { color: inherit; }
+    a:focus-visible { outline: 2px solid var(--mint); outline-offset: 4px; border-radius: 3px; }
+    .skip-link { position: absolute; left: 12px; top: -80px; padding: 10px; background: var(--mint); color: #111; z-index: 5; }
+    .skip-link:focus { top: 12px; }
+    header { background: #222; color: #fff; padding: 16px 24px; display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+    header .logo { font-size: 1.4rem; font-weight: 700; }
+    nav { display: flex; flex-wrap: wrap; gap: 12px 16px; }
+    nav a { color: #fff; text-decoration: none; font-weight: 500; }
+    nav a:hover, nav a[aria-current="page"] { color: var(--mint); }
+    main { min-height: 78vh; padding: 36px 3vw 70px; }
+    h1 { font-size: clamp(2rem, 4.6vw, 2.65rem); text-align: center; margin: 0 0 12px; }
+    .intro { max-width: 730px; margin: 0 auto 50px; color: #b2c4d0; font-size: 1rem; line-height: 1.7; text-align: center; }
+    .resource-list { list-style: none; margin: 0 auto; padding: 0; width: min(100%, 1150px); }
+    .resource-list li { margin: 0 0 22px; }
+    .resource-card { padding: clamp(19px, 2.4vw, 29px); border-radius: 8px; background: var(--panel); border: 1px solid rgba(153,205,232,.12); transition: transform .2s ease, background .2s ease, border-color .2s ease; }
+    .resource-card:hover { background: rgba(36,153,211,.09); border-color: rgba(145,243,199,.25); transform: translateY(-2px); }
+    .resource-top { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; flex-wrap: wrap; margin-bottom: 17px; }
+    h2 { margin: 0; color: var(--blue); font-size: clamp(1.2rem, 2vw, 1.5rem); font-weight: 500; }
+    .status { border: 1px solid rgba(145,243,199,.26); color: var(--mint); background: rgba(145,243,199,.06); padding: 5px 10px; border-radius: 20px; font-size: .72rem; letter-spacing: .02em; white-space: nowrap; }
+    .resource-body { display: grid; grid-template-columns: minmax(180px, 260px) 1fr; gap: clamp(18px, 2.7vw, 36px); align-items: center; }
+    .preview { margin: 0; aspect-ratio: 4 / 3; border-radius: 6px; background: #101b22; border: 1px solid #2b3f48; overflow: hidden; display: flex; align-items: center; justify-content: center; }
+    .preview svg { width: 100%; height: 100%; display: block; }
+    .description { color: #c9d6df; line-height: 1.65; font-size: .98rem; }
+    .description p { margin: 0 0 12px; }
+    .meta { color: #a7c0ce; font-size: .8rem; }
+    .resource-link { display: inline-flex; align-items: center; gap: 5px; color: var(--mint); font-weight: 500; text-decoration: none; margin-top: 4px; }
+    .resource-link:hover { text-decoration: underline; }
+    .closing-note { max-width: 1150px; margin: 30px auto 0; font-size: .9rem; color: #92acbb; }
+    footer { background: #000; border-top: 1px solid #252d33; padding: 20px 24px; text-align: center; font-size: .9rem; color: #9ac0dd; }
+    @media (max-width: 680px) {
+      header { padding: 16px; }
+      nav { gap: 9px 13px; }
+      nav a { font-size: .88rem; }
+      main { padding: 26px 16px 55px; }
+      .intro { margin-bottom: 28px; }
+      .resource-body { grid-template-columns: 1fr; gap: 14px; }
+      .preview { width: min(100%, 400px); }
+    }
+    @media (prefers-reduced-motion: reduce) { *, *::before, *::after { transition: none !important; } }
+  </style>
+</head>
+<body>
+<a href="#content" class="skip-link">Skip to content</a>
+<header>
+  <div class="logo">Jorge Ramirez-Lab</div>
+  <nav aria-label="Main navigation">
+    <a href="home.html">Home</a>
+    <a href="home.html#projects">Research</a>
+    <a href="home.html#news">News</a>
+    <a href="home.html#team">Team</a>
+    <a href="home.html#contact">Contact</a>
+    <a href="Gallery.html">Gallery</a>
+    <a href="publications.html">Publications</a>
+    <a href="education.html" aria-current="page">Education</a>
+  </nav>
+</header>
+<main id="content">
+  <h1>Education</h1>
+  <p class="intro">Interactive resources for learning neuroscience and physiology. Explore simulations and scientific visualizations designed to connect physiological concepts with experimental observations.</p>
+  <ul class="resource-list">
+    <li>
+      <article class="resource-card" aria-labelledby="sensory-title">
+        <div class="resource-top">
+          <h2 id="sensory-title">Sensory Receptor Simulator</h2>
+          <span class="status">In development</span>
+        </div>
+        <div class="resource-body">
+          <figure class="preview" role="img" aria-label="Illustrative diagram of mechanical stimulation and neuronal action potentials; resource screenshot to be added">
+            <svg viewBox="0 0 300 225" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+              <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0b2630"/><stop offset="1" stop-color="#11151c"/></linearGradient></defs>
+              <rect width="300" height="225" fill="url(#g)"/>
+              <path d="M0 47 Q35 29 70 47 T140 47 T210 47 T300 47" stroke="#5c8a9f" fill="none" stroke-width="3"/>
+              <path d="M145 12 v31 m-10-10 10 10 10-10" fill="none" stroke="#8dcfff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+              <g stroke="#5d9f8e" stroke-width="2" fill="none" opacity=".9"><path d="M150 53 v23 q-25 10 -17 20 t-12 21"/><path d="M150 76 q26 14 16 25 t17 21"/><path d="M150 70 q-6 24 -30 20"/><path d="M150 90 q12 18 32 14"/></g>
+              <path d="M20 175 h35 l7-34 8 62 9-28 h27 l7-34 8 62 9-28 h30 l7-34 8 62 9-28 h25 l7-34 8 62 9-28 h30" fill="none" stroke="#91f3c7" stroke-width="2.3" stroke-linejoin="round"/>
+              <text x="17" y="20" fill="#aacddd" font-size="11" font-family="Roboto, sans-serif">Mechanoreceptor response</text>
+            </svg>
+          </figure>
+          <div class="description">
+            <p>Explore how sensory receptors encode different stimuli and transform them into electrical signals. Compare receptor responses, adaptation, and patterns of neuronal firing.</p>
+            <div class="meta">Interactive simulation · Sensory physiology</div>
+            <!-- Add a link here once the independent simulator repository has GitHub Pages enabled:
+            <a class="resource-link" href="https://jramirez-f.github.io/REPOSITORY-NAME/">Open simulator →</a>
+            -->
+          </div>
+        </div>
+      </article>
+    </li>
+    <li>
+      <article class="resource-card" aria-labelledby="visual-title">
+        <div class="resource-top">
+          <h2 id="visual-title">Neuroscience Visualizations</h2>
+          <span class="status">Coming soon</span>
+        </div>
+        <div class="resource-body">
+          <figure class="preview" role="img" aria-label="Illustrative schematic of a neuronal circuit; placeholder preview">
+            <svg viewBox="0 0 300 225" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="225" fill="#101d26"/>
+              <g stroke="#54758a" stroke-width="2" opacity=".9"><path d="M75 64 L153 113 L226 52"/><path d="M75 64 L84 174 L153 113 L238 173"/><path d="M153 113 L226 52 L238 173"/></g>
+              <g fill="#162e3b" stroke="#8dcfff" stroke-width="3"><circle cx="75" cy="64" r="15"/><circle cx="153" cy="113" r="20"/><circle cx="226" cy="52" r="14"/><circle cx="84" cy="174" r="13"/><circle cx="238" cy="173" r="16"/></g>
+              <g fill="#91f3c7"><circle cx="75" cy="64" r="4"/><circle cx="153" cy="113" r="6"/><circle cx="226" cy="52" r="4"/><circle cx="84" cy="174" r="4"/><circle cx="238" cy="173" r="5"/></g>
+            </svg>
+          </figure>
+          <div class="description">
+            <p>Conceptual diagrams and interactive visual explanations of neuronal signaling, sensory processing, and nervous system organization.</p>
+            <div class="meta">Visual learning · Neuroscience</div>
+          </div>
+        </div>
+      </article>
+    </li>
+    <li>
+      <article class="resource-card" aria-labelledby="materials-title">
+        <div class="resource-top">
+          <h2 id="materials-title">Teaching and Study Resources</h2>
+          <span class="status">Coming soon</span>
+        </div>
+        <div class="resource-body">
+          <figure class="preview" role="img" aria-label="Illustrative diagram of notes and a waveform; placeholder preview">
+            <svg viewBox="0 0 300 225" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="225" fill="#101d26"/>
+              <rect x="66" y="27" width="168" height="174" rx="7" fill="#1b2d39" stroke="#5b7f92" stroke-width="2"/>
+              <path d="M91 64 h92 M91 83 h114 M91 103 h86 M91 164 h111" stroke="#658ca0" stroke-width="3" stroke-linecap="round"/>
+              <path d="M94 145 h25 l7-20 9 38 11-17 h55" stroke="#91f3c7" stroke-width="2.5" fill="none"/>
+              <circle cx="211" cy="62" r="11" fill="none" stroke="#8dcfff" stroke-width="3"/>
+              <path d="m205 62 5 5 8-11" stroke="#91f3c7" fill="none" stroke-width="2.5"/>
+            </svg>
+          </figure>
+          <div class="description">
+            <p>Learning activities, study materials, and other resources supporting teaching in physiology and neuroscience.</p>
+            <div class="meta">Teaching material · Student resources</div>
+          </div>
+        </div>
+      </article>
+    </li>
+  </ul>
+  <p class="closing-note">More resources will be added progressively. Preview illustrations will be replaced by screenshots from the corresponding projects.</p>
+</main>
+<footer>© <span id="year"></span> Jorge Ramirez-Franco — All rights reserved</footer>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

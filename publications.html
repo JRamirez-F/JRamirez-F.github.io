@@ -4,20 +4,23 @@
 
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Jorge Ramirez – Lab</title>
+  <title>Publications | Jorge Ramirez – Lab</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 
   <style>
     
-    body { margin: 0; padding: 0; font-family: 'Roboto', sans-serif; background: #fff; color: #111; }
+    body { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Roboto', sans-serif; background: #fff; color: #111; }
     
-    header { background: #222; color: #fff; padding: 16px 24px; display: flex; align-items: center; justify-content: space-between; }
+    header { background: #222; color: #fff; padding: 16px 24px; display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
     
     header .logo { font-size: 1.4rem; font-weight: bold; }
     
-    nav a { color: #fff; margin-left: 16px; text-decoration: none; font-weight: 500; }
+    nav { display: flex; gap: 12px 16px; flex-wrap: wrap; }
+    nav a { color: #fff; text-decoration: none; font-weight: 500; }
+    nav a:hover, nav a:focus-visible { color: #91f3c7; }
+    a:focus-visible { outline: 2px solid #91f3c7; outline-offset: 3px; }
     
     main {
           background: #000000;
@@ -89,9 +92,10 @@
     }
 
     @media (max-width: 768px) {
-        body {
-            padding: 20px 10px;
-        }
+        body { padding: 0; background: #000; }
+        header { padding: 16px; }
+        nav { gap: 10px 14px; }
+        nav a { font-size: .9rem; }
         h1 {
             font-size: 2em;
         }
@@ -133,6 +137,15 @@
 <main>
   <h1>Publications</h1>
 
+  <h2>2026</h2>
+  <ul class="pub-list">
+      <li><a href="https://doi.org/10.1016/j.nbd.2026.107553" target="_blank" rel="noopener noreferrer">
+          <strong>Leana-Sandoval G, Sandoval MA, Kolli AV, Saavedra E, Li KH, Burlingame AL, Ramírez-Franco J, Díaz-Alonso J.</strong>
+          α2δ-1 regulates synaptic AMPA receptor trafficking and LTP through distinct pre- and postsynaptic functions.
+          <em>Neurobiol Dis. 2026.</em>
+      </a></li>
+  </ul>
+
   <h2>2025</h2>
   <ul class="pub-list">
       <li><a href="https://doi.org/10.1101/2025.10.29.685130" target="_blank">
@@ -169,13 +182,7 @@
           <em>Neurobiol Dis 2024.</em>
       </a><sub>✉ Co-corresponding authors</sub></li>
      
-     <li><a href="https://doi.org/10.1101/2024.12.02.626379" target="_blank">
-          <strong>Leana-Sandoval G, Kolli AV, Sandoval MA, Saavedra E, Li KH, Chen LY, Burlingame AL, Ramírez-Franco J, Díaz-Alonso J.</strong> 
-          The VGCC auxiliary subunit α2δ1 is an extracellular GluA1 interactor and regulates LTP, spatial memory, and seizure susceptibility. 
-          <em>bioRxiv [Preprint] 2024.</em>
-      </a></li>
-     
-     <li><a href="https://doi.org/10.1038/s42003-023-05441-6" target="_blank">
+     <li><a href="https://doi.org/10.1523/JNEUROSCI.2289-22.2024" target="_blank">
           <strong>Riondel P, Jurčić N, Mounien L, Ibrahim S, Ramirez-Franco J, Stefanovic S, Trouslard J, Wanaverbecq N, Seddik R.</strong> 
           Evidence for Two Subpopulations of Cerebrospinal Fluid-Contacting Neurons with Opposite GABAergic Signaling in Adult Mouse Spinal Cord.
           <em>J Neurosci. 2024.</em>
@@ -211,7 +218,7 @@
          <em>Brain 2022.</em>
       </a></li>
 
-      <li><a href="https://doi.org/10.1016/10.1007/s00018-022-04527-4" target="_blank">
+      <li><a href="https://doi.org/10.1007/s00018-022-04527-4" target="_blank">
           <strong>Ramirez-Franco J, Azzaz F, Sangiardi M, Ferracci G, Youssouf F, Popoff MR, Seagar M, Lévêque C, Fantini J, El Far O.</strong>. 
           Molecular landscape of BoNT/B bound to a membrane-inserted synaptotagmin/ganglioside complex. 
           <em>Cell Mol Life Sci 2022.</em>
