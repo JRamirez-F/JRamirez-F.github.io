@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <!-- Google Fonts: original gallery font plus site-header font -->
-<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700;800&amp;family=Roboto+Mono:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
 
 <style>
 * {
@@ -189,84 +189,66 @@ h1 {
   }
 }
 
-/* ===== SITE NAVIGATION (SCOPED TO HEADER; GALLERY UNCHANGED) ===== */
-.site-header {
-  font-family: 'Roboto', Arial, sans-serif;
-  background: #222;
-  color: #fff;
-  margin: -40px -20px 40px; /* full-width header despite existing page padding */
-  padding: 16px 24px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 14px 24px;
-  flex-wrap: wrap;
-}
-.site-header .site-logo {
-  font-size: 1.4rem;
-  font-weight: 700;
-  line-height: 1.3;
-}
-.site-header .site-nav {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 10px 16px;
-}
-.site-header .site-nav a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: 500;
-  line-height: 1.5;
-  transition: color 0.2s ease;
-}
-.site-header .site-nav a:hover,
-.site-header .site-nav a:focus-visible,
-.site-header .site-nav a[aria-current="page"] {
-  color: #91f3c7;
-}
-.site-header .site-nav a:focus-visible {
-  outline: 2px solid #91f3c7;
-  outline-offset: 4px;
-  border-radius: 2px;
-}
-@media (max-width: 900px) {
-  .site-header {
-    flex-direction: column;
-    text-align: center;
-    justify-content: center;
-  }
-  .site-header .site-nav {
-    justify-content: center;
-  }
-}
-@media (max-width: 600px) {
-  .site-header { padding: 16px; gap: 12px; }
-  .site-header .site-logo { font-size: 1.2rem; }
-  .site-header .site-nav { gap: 8px 14px; }
-  .site-header .site-nav a { font-size: 0.9rem; }
-}
+/* ===== SITE HEADER — matched to home.html ===== */
+.site-header{--ink:#e8f1f5;--faint:#79939f;--mint:#91f3c7;--line:rgba(166,208,225,.17);font-family:Roboto,Arial,sans-serif;font-size:16px;line-height:1.7;color:var(--ink)}
+.site-header,.site-header *, .site-header *::before,.site-header *::after{box-sizing:border-box}
+.site-header a{color:inherit}
+.site-header a:focus-visible,.site-header button:focus-visible{outline:2px solid var(--mint);outline-offset:4px;border-radius:4px}
+    .site-header{position:sticky;top:0;z-index:50;background:rgba(9,16,24,.93);-webkit-backdrop-filter:blur(18px);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
+    .nav-shell{max-width:1370px;margin:auto;min-height:74px;padding:12px clamp(16px,3vw,42px);display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .brand{display:inline-flex;align-items:center;gap:12px;text-decoration:none;min-width:max-content}
+    .brand-mark{display:grid;place-items:center;width:39px;height:39px;border:1px solid rgba(145,243,199,.5);border-radius:10px;color:var(--mint);font:600 14px 'Roboto Mono',monospace;letter-spacing:-1px;background:rgba(145,243,199,.06)}
+    .brand-text{line-height:1.2;display:flex;flex-direction:column}.brand-text strong{font-size:14px;letter-spacing:.01em}.brand-text span{font:400 10px 'Roboto Mono',monospace;text-transform:uppercase;letter-spacing:.17em;color:var(--faint);margin-top:5px}
+    .site-nav{display:flex;flex-wrap:wrap;align-items:center;justify-content:flex-end;gap:5px}
+    .site-nav a{text-decoration:none;color:#c4d6df;font-size:13px;font-weight:500;padding:9px 10px;border-radius:7px;transition:background .2s,color .2s}
+    .site-nav a:hover,.site-nav a[aria-current="page"]{background:rgba(141,207,255,.08);color:var(--mint)}
+    .site-nav .nav-education{border:1px solid rgba(145,243,199,.32);color:var(--mint);margin-left:4px}
+    .menu-toggle{display:none;border:1px solid var(--line);color:var(--ink);background:#152430;padding:9px 13px;border-radius:9px;font:500 13px Roboto,sans-serif;cursor:pointer}
+    @media(max-width:1120px){.site-nav a{font-size:12px;padding:8px}.nav-shell{gap:10px}}
+    @media(max-width:960px){
+      .nav-shell{flex-wrap:wrap;min-height:65px}
+      .menu-toggle{display:inline-flex;align-items:center;gap:8px}
+      .site-nav{display:none;flex-basis:100%;width:100%;flex-direction:column;align-items:stretch;gap:3px;padding:9px 0 6px;border-top:1px solid var(--line)}
+      .site-nav.is-open{display:flex}.site-nav a{font-size:14px;margin:0;padding:11px 12px}
+      .site-nav .nav-education{margin-left:0}
+    }
+    @media(max-width:430px){
+      .brand-text strong{font-size:12px}
+      .brand-mark{width:34px;height:34px}
+      .menu-toggle{padding:8px 10px}
+    }
+    @media(prefers-reduced-motion:reduce){.site-header *{transition:none!important}}
 
+/* Keep the gallery content inset while the header spans the viewport. */
+body{padding:0}
+.gallery-main{padding:40px 20px}
 </style>
 </head>
 
 <body>
 
 <header class="site-header">
-  <div class="site-logo">Jorge Ramirez-Lab</div>
-  <nav class="site-nav" aria-label="Main navigation">
-    <a href="home.html">Home</a>
-    <a href="home.html#projects">Research</a>
-    <a href="home.html#news">News</a>
-    <a href="home.html#team">Team</a>
-    <a href="home.html#contact">Contact</a>
-    <a href="Gallery.html" aria-current="page">Gallery</a>
-    <a href="education.html">Education</a>
-    <a href="publications.html">Publications</a>
-  </nav>
+  <div class="nav-shell">
+    <a class="brand" href="index.html" aria-label="Jorge Ramirez Lab — landing page">
+      <span class="brand-mark" aria-hidden="true">JR</span>
+      <span class="brand-text"><strong>Jorge Ramirez Lab</strong><span>Neuroscience</span></span>
+    </a>
+    <button class="menu-toggle" id="menu-toggle" type="button" aria-controls="primary-navigation" aria-expanded="false">Menu <span aria-hidden="true">☰</span></button>
+    <nav class="site-nav" id="primary-navigation" aria-label="Primary navigation">
+      <a href="home.html#about">Home</a>
+      <a href="home.html#projects">Research</a>
+      <a href="home.html#news">News</a>
+      <a href="home.html#team">Team</a>
+      <a href="home.html#contact">Contact</a>
+      <a href="Gallery.html" aria-current="page">Gallery</a>
+      <a href="publications.html">Publications</a>
+      <a href="education.html" class="nav-education">Education</a>
+    </nav>
+  </div>
 </header>
 
 
+<main class="gallery-main">
 <h1>Portraits of the Nervous System</h1>
 
 <div class="gallery-grid">
@@ -757,6 +739,8 @@ h1 {
   <!-- ADD MORE IMAGES HERE -->
 </div>
 
+</main>
+
 <!-- ===== LIGHTBOX FULLSCREEN ===== -->
 <div class="lightbox" id="lightbox">
   <span class="close" onclick="closeLightbox()">×</span>
@@ -789,5 +773,19 @@ h1 {
 
 </script>
 
+<script>
+(() => {
+  const toggle=document.getElementById('menu-toggle');
+  const nav=document.getElementById('primary-navigation');
+  function closeMenu(){nav.classList.remove('is-open');toggle.setAttribute('aria-expanded','false')}
+  toggle.addEventListener('click',()=>{
+    const open=nav.classList.toggle('is-open');
+    toggle.setAttribute('aria-expanded',String(open));
+  });
+  nav.querySelectorAll('a').forEach(link=>link.addEventListener('click',closeMenu));
+  document.addEventListener('keydown',event=>{if(event.key==='Escape')closeMenu()});
+  window.addEventListener('resize',()=>{if(window.innerWidth>960)closeMenu()});
+})();
+</script>
 </body>
 </html>
