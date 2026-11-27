@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="#0a1119" name="theme-color"/>
+<meta content="Synaptotagmin 1 and 2, ganglioside interactions, synaptic vesicle protein confinement, recycling and neurotransmission fidelity." name="description"/>
+<meta content="Jorge Ramirez-Franco" name="author"/>
+<meta content="article" property="og:type"/>
+<meta content="Synaptotagmins and Fast Synaptic Vesicle Recycling | Jorge Ramirez Lab" property="og:title"/>
+<meta content="From synaptotagmin–ganglioside interactions to the molecular identity and rapid reuse of synaptic vesicles." property="og:description"/>
+<meta content="https://jramirez-f.github.io/synaptotagmins.html" property="og:url"/>
+<link href="https://jramirez-f.github.io/synaptotagmins.html" rel="canonical"/>
+<title>Synaptotagmins and Fast Synaptic Vesicle Recycling | Jorge Ramirez Lab</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&amp;family=Roboto+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<style>
+:root{color-scheme:dark;--bg:#0a1119;--bg2:#101c28;--surface:#14232f;--ink:#e8f1f5;--muted:#b2c8d3;--faint:#89a6b5;--cyan:#8dcfff;--mint:#91f3c7;--line:rgba(166,208,225,.18);--max:1190px}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:92px}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Roboto,Arial,sans-serif;line-height:1.75;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(ellipse 80% 50% at 94% 13%,rgba(22,81,107,.15),transparent 74%),radial-gradient(ellipse 65% 50% at 0 75%,rgba(21,73,74,.09),transparent 76%)}
+a{color:var(--mint);text-decoration:none}a:hover{text-decoration:underline}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var(--mint);outline-offset:4px;border-radius:4px}
+.skip-link{position:absolute;top:-70px;left:12px;z-index:100;background:var(--mint);color:#08131b;padding:8px 12px;border-radius:5px}.skip-link:focus{top:10px}
+.site-header{position:sticky;top:0;z-index:50;background:rgba(9,16,24,.94);-webkit-backdrop-filter:blur(18px);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
+.nav-shell{max-width:1370px;margin:auto;min-height:74px;padding:12px clamp(16px,3vw,42px);display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{display:inline-flex;align-items:center;gap:12px;text-decoration:none;min-width:max-content;color:var(--ink)}
+.brand-mark{display:grid;place-items:center;width:39px;height:39px;border:1px solid rgba(145,243,199,.5);border-radius:10px;color:var(--mint);font:600 14px 'Roboto Mono',monospace;letter-spacing:-1px;background:rgba(145,243,199,.06)}
+.brand-text{line-height:1.2;display:flex;flex-direction:column}.brand-text strong{font-size:14px;letter-spacing:.01em}.brand-text span{font:400 10px 'Roboto Mono',monospace;text-transform:uppercase;letter-spacing:.17em;color:var(--faint);margin-top:5px}
+.site-nav{display:flex;flex-wrap:wrap;align-items:center;justify-content:flex-end;gap:5px}
+.site-nav a{text-decoration:none;color:#c4d6df;font-size:13px;font-weight:500;padding:9px 10px;border-radius:7px;transition:background .2s,color .2s}
+.site-nav a:hover,.site-nav a.is-active{background:rgba(141,207,255,.08);color:var(--mint)}
+.site-nav .nav-education{border:1px solid rgba(145,243,199,.32);color:var(--mint);margin-left:4px}
+.menu-toggle{display:none;border:1px solid var(--line);color:var(--ink);background:#152430;padding:9px 13px;border-radius:9px;font:500 13px Roboto,sans-serif;cursor:pointer}
+.container{width:min(var(--max),calc(100% - 48px));margin-inline:auto}
+.hero{padding:67px 0 55px;border-bottom:1px solid var(--line);background:linear-gradient(155deg,rgba(17,37,52,.76),rgba(10,17,25,.65))}
+.eyebrow,.section-num,.toc-heading,.hero-tags span{font-family:'Roboto Mono',monospace;letter-spacing:.12em;text-transform:uppercase;font-size:11px}
+.eyebrow{color:var(--mint);margin:0 0 18px}.hero h1{font-size:clamp(2.25rem,4.3vw,4.25rem);line-height:1.1;letter-spacing:-.037em;margin:0 0 23px;max-width:1040px}
+.hero h1 span{color:var(--cyan)}.hero-subtitle{color:#c1d5e0;max-width:810px;font-size:clamp(1.02rem,1.45vw,1.18rem);margin:0 0 24px}
+.hero-tags{display:flex;gap:9px;flex-wrap:wrap;margin-bottom:29px}.hero-tags span{letter-spacing:.035em;color:#a5c8d8;border:1px solid rgba(141,207,255,.22);border-radius:50px;padding:7px 12px;background:rgba(141,207,255,.035)}
+.back-link{display:inline-block;padding:9px 14px;border:1px solid rgba(145,243,199,.3);border-radius:8px;font-size:13px;font-weight:600}
+.content-grid{display:grid;grid-template-columns:minmax(0,1fr) 235px;gap:47px;align-items:start;padding-top:45px;padding-bottom:80px}
+.story{min-width:0}.toc{position:sticky;top:102px;border:1px solid var(--line);background:rgba(20,35,47,.8);border-radius:15px;padding:21px;max-height:calc(100vh - 124px);overflow:auto}
+.toc-heading{font-weight:600;color:var(--mint);margin:0 0 13px}.toc a{display:block;padding:7px 8px;border-radius:6px;color:#afc5d0;font-size:12px;line-height:1.45}.toc a:hover{color:var(--mint);background:rgba(141,207,255,.08);text-decoration:none}
+.article-section{padding:0 0 54px;margin:0 0 52px;border-bottom:1px solid var(--line);scroll-margin-top:100px}.article-section:last-child{border-bottom:0;margin:0}
+.article-heading{display:flex;align-items:start;gap:20px;margin-bottom:24px}.section-num{color:var(--mint);padding-top:9px;white-space:nowrap}
+.article-heading h2{font-size:clamp(1.65rem,2.55vw,2.45rem);font-weight:600;line-height:1.16;letter-spacing:-.025em;margin:0;color:var(--cyan)}
+.article-content{font-size:15px;line-height:1.96;color:#c8d8e1}.article-content>p{margin:0 0 23px;max-width:92ch}.article-content>p:last-child{margin-bottom:0}
+.article-content b,.article-content strong{color:#edf6fa}.article-content a:not(.figure-image){text-decoration:none;color:#94dfcd;border-bottom:1px solid rgba(145,243,199,.28)}.article-content a:not(.figure-image):hover{color:#ccffec;border-color:currentColor}
+.article-content ul{margin:10px 0 0;padding-left:25px}.article-content ul li{padding:0 0 9px 6px}.article-content ul li::marker{color:var(--mint)}
+.research-figure{margin:33px 0 38px;padding:11px;border-radius:15px;background:linear-gradient(125deg,#14232f,#10202a);border:1px solid var(--line)}
+.figure-image{display:block;background:#0a1119;border-radius:9px;overflow:hidden;padding:8px}.figure-image img{display:block;width:100%;max-height:720px;height:auto;object-fit:contain;margin:auto}
+.research-figure figcaption{padding:19px 15px 13px;font-size:12.8px;line-height:1.8;color:#b3c7d2}.research-figure figcaption b{color:var(--cyan)}
+.figure-source{display:block;margin-top:12px;font-size:12px;font-weight:600}
+.contributions-list{list-style:none;padding:0;margin:0;display:grid;gap:13px;counter-reset:papers}
+.contributions-list li{padding:17px 21px;border-radius:10px;border:1px solid var(--line);background:#142431;font-size:14px;line-height:1.7}
+.contributions-list b{color:var(--mint)}.contribution-note{display:block;margin-top:9px;color:var(--faint);font-size:12px}.contributions-footer{margin-top:21px!important}
+.references-panel{border:1px solid var(--line);border-radius:12px;background:#14232f;padding:0 22px}
+.references-panel summary{cursor:pointer;color:var(--cyan);padding:19px 0;font-size:15px;font-weight:600}
+.reference-count{float:right;font-family:'Roboto Mono',monospace;color:var(--faint);font-size:11px;font-weight:400}
+.references-list{margin:0!important;padding:8px 0 24px 25px!important;display:grid;gap:13px;font-size:12.5px;line-height:1.65;color:#bacbd5}
+.references-list li{padding-left:7px}.references-list li::marker{color:#84b4ca}
+.footer{border-top:1px solid var(--line);padding:28px 0;color:var(--faint);font-size:13px}.footer-inner{display:flex;flex-wrap:wrap;gap:15px;justify-content:space-between}
+@media(max-width:1100px){.site-nav a{font-size:12px;padding:8px}.nav-shell{gap:10px}.content-grid{grid-template-columns:minmax(0,1fr) 205px;gap:26px}}
+@media(max-width:960px){.nav-shell{flex-wrap:wrap;min-height:65px}.menu-toggle{display:inline-flex;align-items:center;gap:8px}.site-nav{display:none;flex-basis:100%;width:100%;flex-direction:column;align-items:stretch;gap:3px;padding:9px 0 6px;border-top:1px solid var(--line)}.site-nav.is-open{display:flex}.site-nav a{font-size:14px;margin:0;padding:11px 12px}.site-nav .nav-education{margin-left:0}.content-grid{grid-template-columns:1fr;gap:15px}.toc{position:static;max-height:none;grid-row:1;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:2px 8px}.toc-heading{grid-column:1/-1}}
+@media(max-width:680px){html{scroll-padding-top:70px}.container{width:calc(100% - 30px)}.hero{padding:45px 0 43px}.hero h1{font-size:clamp(2rem,8vw,2.75rem)}.content-grid{padding-top:25px;padding-bottom:50px}.toc{grid-template-columns:repeat(2,minmax(0,1fr));padding:14px}.toc a{font-size:11px}.article-section{padding-bottom:34px;margin-bottom:32px}.article-heading{flex-direction:column;gap:8px;margin-bottom:18px}.section-num{padding:0}.article-content{font-size:14px;line-height:1.83}.research-figure{margin:22px 0 28px;padding:6px}.figure-image{padding:4px}.research-figure figcaption{padding:15px 12px;font-size:12px}.reference-count{float:none;display:block;margin-top:4px}.references-list{font-size:12px}.footer-inner{display:block}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important}}
+.article-content h3{font-size:1.12rem;color:var(--mint);line-height:1.45;margin:29px 0 10px;font-weight:600}
+.hypothesis{border-left:3px solid var(--mint);background:rgba(145,243,199,.05);padding:18px 22px;margin:25px 0;border-radius:0 9px 9px 0;color:#d9e9e9}
+.hypothesis strong{color:var(--mint)}
+.figure-compact .figure-image img{max-height:590px;width:auto;max-width:100%}
+.research-figure .figure-source{color:var(--faint);font-weight:400}
+.ref-link{white-space:nowrap}
+
+.syt-legend{margin:18px 0 6px;padding:16px 17px;border:1px solid var(--line);border-radius:9px;background:#101d28;color:#c8d8e1;font-size:13px;line-height:1.55}
+.legend-heading{font:600 11px 'Roboto Mono',monospace;letter-spacing:.12em;text-transform:uppercase;color:var(--mint);margin-bottom:14px}
+.legend-gradient-row{display:flex;align-items:center;gap:15px;padding-bottom:14px;margin-bottom:14px;border-bottom:1px solid var(--line)}
+.legend-scale{width:112px;flex:0 0 112px}.legend-scale-labels{display:flex;justify-content:space-between;font-size:10px;color:#b2c8d3;margin-bottom:4px}.legend-gradient{height:12px;border:1px solid rgba(255,255,255,.25);border-radius:3px;background:linear-gradient(90deg,#69b0cd,#8fc1bf,#9ac990,#cde58d)}
+.legend-items{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px 20px}.legend-item{display:flex;align-items:flex-start;gap:10px}.legend-symbol{display:inline-block;width:13px;height:13px;flex:0 0 13px;margin-top:4px}.syt-bound{background:#ed1b24;border-radius:50%}.syt-free{background:#f58d9a;border-radius:50%}.sv-square{background:#10af00}.sv-hexagon{background:#a600c0;clip-path:polygon(25% 0,75% 0,100% 50%,75% 100%,25% 100%,0 50%)}.sv-circle{background:#ec9400;border-radius:50%}.legend-symbols{display:flex;gap:5px;flex-shrink:0}.legend-other{grid-column:1/-1}.legend-description{display:block;color:var(--muted);font-size:12px;margin-top:2px}
+.methodology-panel{margin-top:30px}.methodology-panel .article-content{padding:0 0 21px}.methodology-panel .article-content>p{margin-bottom:16px}.methodology-panel .article-content h3{font-size:1rem;margin:21px 0 8px}
+@media(max-width:550px){.legend-items{grid-template-columns:1fr}.legend-gradient-row{align-items:flex-start}.legend-scale{width:90px;flex-basis:90px}.syt-legend{padding:13px}.legend-other{grid-column:auto}}
+/* Figure 1: light background for transparent molecular artwork and dark labels. */
+#figure-1 .figure-image{background:#ffffff}
+#figure-1 .panel-description{display:block;margin-top:9px}
+/* Figure 2: match the navy background of the existing molecular rendering. */
+#figure-2,#figure-2 .figure-image{background:#0d1722}
+#figure-2 .figure-image{padding:0}
+#figure-3 .syt-legend{margin:0 0 20px}
+#figure-3 .figure-caption-text{margin:0}
+#figure-3 .legend-heading{margin-bottom:12px}
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to content</a>
+<header class="site-header">
+<div class="nav-shell">
+<a aria-label="Jorge Ramirez Lab — landing page" class="brand" href="index.html"><span aria-hidden="true" class="brand-mark">JR</span><span class="brand-text"><strong>Jorge Ramirez Lab</strong><span>Neuroscience</span></span></a>
+<button aria-controls="primary-navigation" aria-expanded="false" class="menu-toggle" id="menu-toggle" type="button">Menu <span aria-hidden="true">☰</span></button>
+<nav aria-label="Primary navigation" class="site-nav" id="primary-navigation">
+<a href="home.html">Home</a>
+<a class="is-active" href="home.html#projects">Research</a>
+<a href="home.html#news">News</a>
+<a href="home.html#team">Team</a>
+<a href="home.html#contact">Contact</a>
+<a href="Gallery.html">Gallery</a>
+<a href="publications.html">Publications</a>
+<a class="nav-education" href="education.html">Education</a>
+</nav>
+</div>
+</header>
+<main id="main-content">
+<section aria-labelledby="page-heading" class="hero"><div class="container">
+<p class="eyebrow">Research / Molecular &amp; cellular neuroscience</p>
+<h1 id="page-heading">Synaptotagmins and<br/><span>fast synaptic vesicle recycling.</span></h1>
+<p class="hero-subtitle">From synaptotagmin–ganglioside interactions to the molecular identity of synaptic vesicles and the fidelity of neurotransmission during high-frequency activity.</p>
+<div class="hero-tags"><span>SYT1 / SYT2</span><span>Gangliosides</span><span>Vesicle recycling</span><span>Presynaptic organization</span><span>Neurotransmission</span></div>
+<a class="back-link" href="home.html#projects">← Back to research</a>
+</div></section>
+<div class="container content-grid"><article aria-label="Synaptotagmin research overview" class="story">
+<section aria-labelledby="heading-overview" class="article-section" id="overview">
+<div class="article-heading"><span class="section-num">01 / 06</span><h2 id="heading-overview">The Synaptic Vesicle Cycle</h2></div>
+<div class="article-content"><p>Synaptic vesicle (SV) exocytosis is the fundamental mechanism by which chemical synapses transmit information. Action potentials open voltage-gated Ca²⁺ channels, producing highly localized elevations in intracellular Ca²⁺ that trigger vesicle fusion through the coordinated action of SNARE proteins and their regulators [<a href="#ref-1">Südhof, 2004</a>; <a href="#ref-27">Südhof, 2013</a>]. To maintain neurotransmission during repetitive activity, presynaptic terminals must not only release neurotransmitters with remarkable temporal precision but also recover and replenish functional vesicles.</p>
+<p>After full-collapse fusion, vesicular membrane proteins are incorporated into the presynaptic plasma membrane and become exposed to the extracellular environment. Their retrieval, sorting and reuse must be coordinated with endocytosis to maintain the molecular composition of synaptic vesicles [<a href="#ref-2">Chanaday et al., 2019</a>; <a href="#ref-36">Chanaday &amp; Kavalali, 2017</a>; <a href="#ref-37">Opazo et al., 2010</a>]. How synaptic vesicle proteins remain coordinated and rapidly reusable after exocytosis, particularly during high-frequency activity, remains an important question in synaptic neuroscience.</p></div>
+</section>
+<section aria-labelledby="heading-synaptotagmins" class="article-section" id="synaptotagmins">
+<div class="article-heading"><span class="section-num">02 / 06</span><h2 id="heading-synaptotagmins">Synaptotagmins: Beyond Calcium Sensing</h2></div>
+<div class="article-content"><p>Synaptotagmins (SYTs) are a family of membrane proteins with diverse functions in regulated secretion. SYT1 and SYT2 are major Ca²⁺ sensors for fast synchronous neurotransmitter release. Their modular architecture comprises an N-terminal luminal domain, a single transmembrane helix, a flexible cytoplasmic linker and two cytoplasmic C2 domains (C2A and C2B), which participate in Ca²⁺-dependent interactions with lipids and the fusion machinery [<a href="#ref-32">Park &amp; Ryu, 2018</a>; <a href="#ref-33">Koh &amp; Bellen, 2003</a>; <a href="#ref-34">Geppert et al., 1994</a>].</p>
+<p>Beyond their classical role in triggering vesicle fusion, synaptotagmins participate in the coordination of exocytosis and endocytosis [<a href="#ref-38">Chen et al., 2022</a>; <a href="#ref-39">Bolz et al., 2023</a>]. Across the 17 mammalian synaptotagmin isoforms, the cytoplasmic C2 domains are relatively conserved, whereas the N-terminal regions display substantial sequence variability.</p>
+<p>The N-terminal region is exposed to the extracellular space upon vesicle fusion. Of particular interest is the luminal/extracellular juxtamembrane domain (JMD), immediately adjacent to the transmembrane helix, which provides a molecular interface for interactions at the membrane surface.</p>
+<!-- FIGURE 1: four panels, read left to right and top to bottom. -->
+<figure class="research-figure" id="figure-1">
+<a aria-label="Open Figure 1 at full size" class="figure-image" href="images/syt-structure.png" rel="noopener noreferrer" target="_blank"><img alt="Four-panel figure: A, upper left, full-length synaptotagmin; B, upper right, vesicle and plasma membrane model with SYT2 in blue; C, lower left, structural superpositions of SYT N-terminal regions; D, lower right, sequence alignments of SYT1 and SYT2 and of SYT2 orthologs." decoding="async" loading="lazy" src="images/syt-structure.png"/></a>
+<figcaption><b>Figure 1: Molecular architecture and evolutionary conservation of synaptotagmins 1 and 2.</b>
+<span class="panel-description"><b>A)</b> Molecular representation of a full-length synaptotagmin showing its luminal/extracellular (EC) domain, transmembrane (TM) domain, flexible cytoplasmic linker, and tandem C2A and C2B domains.</span>
+<span class="panel-description"><b>B)</b> Molecular model of a synaptic vesicle in close apposition to the presynaptic plasma membrane, based on molecular models from Rizo et al. (2024). SYT2 is highlighted in blue, illustrating its membrane topology and spatial organization relative to the synaptic vesicle fusion machinery.</span>
+<span class="panel-description"><b>C)</b> Structural superposition of the N-terminal regions of SYT1 and SYT2, encompassing their extracellular juxtamembrane and transmembrane domains. Additional structural superpositions are shown below, highlighting similarities in the organization of these regions.</span>
+<span class="panel-description"><b>D)</b> Multiple sequence alignments of the N-terminal regions of murine SYT1 and SYT2 (upper alignment) and SYT2 orthologs (lower alignment). Conservation scores are represented by yellow bars beneath each alignment. Despite the overall variability of N-terminal domains across the synaptotagmin family, SYT1 and SYT2 display remarkable sequence conservation within their extracellular juxtamembrane domains, suggesting an evolutionarily conserved functional role.</span>
+<span class="figure-source"><a href="images/syt-structure.png" rel="noopener noreferrer" target="_blank">View full image ↗</a></span></figcaption>
+</figure></div>
+</section>
+<section aria-labelledby="heading-gangliosides" class="article-section" id="gangliosides">
+<div class="article-heading"><span class="section-num">03 / 06</span><h2 id="heading-gangliosides">Synaptotagmin–Ganglioside Interactions</h2></div>
+<div class="article-content"><p>Our previous work, initially motivated by the molecular recognition of synaptotagmin by botulinum neurotoxin type B (BoNT/B), identified a ganglioside-binding motif in the luminal/extracellular JMD of SYT1 and SYT2. We showed that binding of the polysialoganglioside GT1b promotes a disorder-to-α-helix transition in this region, leading to the formation of a high-affinity co-receptor for BoNT/B [<a href="#ref-24">Flores &amp; Ramírez-Franco et al., 2019</a>; <a href="#ref-25">Ramírez-Franco et al., 2022</a>].</p>
+<p>In a subsequent study, we identified a naturally occurring amino acid substitution (N59Q) in the extracellular JMD of SYT2 in members of the Felidae family and showed that it prevents BoNT/B binding [<a href="#ref-25">Ramírez-Franco et al., 2022</a>]. This finding demonstrates that a single sequence variation in this region can profoundly alter toxin recognition.</p><h3>An evolutionary paradox</h3>
+<p>Despite the substantial diversity of N-terminal sequences across the synaptotagmin family, the luminal/extracellular JMDs of SYT1 and SYT2 are strikingly conserved between these two paralogs and across vertebrate orthologs. This is particularly intriguing given that both isoforms are major sensors for fast synchronous neurotransmission.</p>
+<p><strong>Why has a domain that confers susceptibility to a potent bacterial neurotoxin remained so highly conserved?</strong> One plausible explanation is that this region is subject to evolutionary constraints arising from an important physiological function. This possibility shifts the focus from toxin recognition to the endogenous role of SYT1/2–ganglioside interactions in the organization and recycling of synaptic vesicle proteins.</p>
+<!-- FIGURE 2: Reuses the existing home-page image; no duplicate asset required. -->
+<figure class="research-figure figure-compact" id="figure-2">
+<a aria-label="Open Figure 2 at full size" class="figure-image" href="images/BontB_thumb.png" rel="noopener noreferrer" target="_blank"><img alt="Molecular model of SYT2 and BoNT/B in a membrane with GT1b, GD1a and cholesterol" decoding="async" loading="lazy" src="images/BontB_thumb.png"/></a>
+<figcaption><b>Figure 2: Molecular model of the SYT2–BoNT/B complex.</b> Model of SYT2 (residues 42–80) bound to the receptor-binding domain of BoNT/B (H<sub>C</sub>, residues 1079–1290). The model is based on the superposition of a preformed synaptotagmin–GT1b complex onto the SYT-binding site of the toxin, which is also bound to GD1a. A cholesterol molecule is positioned between the SYT transmembrane domain and the ceramide moiety of GD1a. BoNT/B and SYT2 are represented as cartoons (coral and dark cyan, respectively). Gangliosides and cholesterol are represented as spheres (GT1b and GD1a, deep purple; cholesterol, light purple). The complex was inserted into a pseudo-realistic membrane using GROMACS. <span class="figure-source">Model from <a href="#ref-25">Ramírez-Franco et al., 2022</a> · Related work: <a href="#ref-24">Flores &amp; Ramírez-Franco et al., 2019</a> · <a href="images/BontB_thumb.png" rel="noopener noreferrer" target="_blank">View full image ↗</a></span></figcaption>
+</figure></div>
+</section>
+<section aria-labelledby="heading-vesicle-identity" class="article-section" id="vesicle-identity">
+<div class="article-heading"><span class="section-num">04 / 06</span><h2 id="heading-vesicle-identity">Preserving Synaptic Vesicle Identity</h2></div>
+<div class="article-content"><p>Following full-collapse exocytosis, vesicle proteins could disperse laterally within the presynaptic plasma membrane. Nevertheless, the retrieval and reuse of vesicular components must occur efficiently enough to support repeated rounds of release. Studies of vesicle protein organization and mobility indicate that diffusion, clustering and cargo retrieval are important aspects of this process [<a href="#ref-37">Opazo et al., 2010</a>; <a href="#ref-40">Rizzoli, 2014</a>; <a href="#ref-41">Willig et al., 2006</a>; <a href="#ref-45">Gimber et al., 2015</a>].</p>
+<p>One particularly intriguing feature of synaptotagmin is the presence of a fraction of the protein at the plasma membrane, outside the vesicular pool [<a href="#ref-40">Rizzoli, 2014</a>]. Given the ability of SYT1/2 to interact with gangliosides, this resident population provides a starting point for investigating a possible mechanism of protein confinement at the presynaptic surface.</p>
+<div class="hypothesis"><strong>Working hypothesis.</strong> Interactions between the extracellular JMDs of SYT1/2 and GT1b may contribute to diffusional trapping of newly exocytosed vesicular proteins, restricting their lateral dispersion and facilitating their retrieval for subsequent rounds of neurotransmission.</div>
+<p>This model predicts that disturbing JMD-dependent interactions could alter vesicle protein mobility, the kinetics of the exo–endocytic cycle, vesicle pool organization and, ultimately, the ability of synapses to sustain neurotransmitter release during repetitive activity. Whether these predictions hold remains to be tested.</p><!-- FIGURE 3: Original GIF without embedded legend. Graphical key precedes the explanatory caption. --><figure class="research-figure" id="figure-3">
+<a aria-label="Open Figure 3 at full size" class="figure-image" href="images/syt-diffusional-trapping.gif" rel="noopener noreferrer" target="_blank"><img alt="Top view of a fully collapsed synaptic vesicle: a central membrane region enriched in GT1b, surrounded by lower-GT1b presynaptic plasma membrane, with free and GT1b-associated synaptotagmin and other vesicle proteins." decoding="async" loading="lazy" src="images/syt-diffusional-trapping.gif"/></a>
+<figcaption>
+<div aria-label="Figure 3 visual legend" class="syt-legend" role="group">
+<div class="legend-heading">Graphical key</div>
+<div class="legend-gradient-row"><div class="legend-scale"><div class="legend-scale-labels"><span>Low</span><span>High</span></div><div aria-hidden="true" class="legend-gradient"></div></div><div><strong>[GT1b]</strong><span class="legend-description">Relative GT1b concentration: lower in the surrounding presynaptic plasma membrane (blue), higher in the collapsed SV membrane (green). Schematic, not measured.</span></div></div>
+<div class="legend-items">
+<div class="legend-item"><span aria-hidden="true" class="legend-symbol syt-bound"></span><div><strong>SYT–GT1b</strong><span class="legend-description">Ganglioside-associated synaptotagmin.</span></div></div>
+<div class="legend-item"><span aria-hidden="true" class="legend-symbol syt-free"></span><div><strong>Free SYT</strong><span class="legend-description">Synaptotagmin not bound to GT1b.</span></div></div>
+<div class="legend-item legend-other"><span aria-hidden="true" class="legend-symbols"><span class="legend-symbol sv-square"></span><span class="legend-symbol sv-hexagon"></span><span class="legend-symbol sv-circle"></span></span><div><strong>Other SV proteins</strong><span class="legend-description">Different vesicular membrane proteins, represented by distinct symbols without assigning individual protein identities.</span></div></div>
+</div>
+</div>
+<p class="figure-caption-text"><b>Figure 3: A proposed diffusional-trapping mechanism.</b> Top view of a synaptic vesicle (SV) immediately after full-collapse fusion with the presynaptic plasma membrane. The central circular region represents the membrane contributed by the collapsed SV, depicted as relatively enriched in GT1b (green), while the surrounding region represents the pre-existing plasma membrane, depicted with a lower GT1b concentration (blue). The animation illustrates the lateral redistribution of synaptotagmins and other SV membrane proteins after exocytosis and how SYT–GT1b interactions might contribute to protein confinement and subsequent retrieval. The spatial distribution of GT1b and the proposed trapping mechanism are hypothetical, not experimental measurements.</p>
+<span class="figure-source">DyNaMo seminar, 2025 · slide 31 · Animated conceptual model · <a href="images/syt-diffusional-trapping.gif" rel="noopener noreferrer" target="_blank">View full image ↗</a></span></figcaption>
+</figure><details class="references-panel methodology-panel" id="research-approaches"><summary>Selected methodological approaches</summary><div class="article-content"><p>The following experimental framework was developed to investigate the physiological role of the SYT1/2 extracellular domains. It is included here as scientific context for the hypothesis, not as a description of ongoing experiments or a commitment to carry them out.</p>
+<h3>01 — Activity-dependent extracellular interactions</h3><p>Proximity-labeling proteomics in neuronal cultures could characterize the molecular environment of the exposed SYT1/2 luminal domains during vesicle exocytosis. Comparing resting and stimulated conditions, with and without perturbation of ganglioside synthesis, could identify candidate proximity partners for validation by direct interaction assays [<a href="#ref-44">Pascual-Caro &amp; de Juan-Sanz, 2024</a>].</p>
+<h3>02 — Vesicle dynamics and presynaptic organization</h3><p>Live-cell fluorescence imaging with pHluorin-tagged vesicle proteins, combined with genetic and lipid perturbations, could assess exo–endocytosis kinetics and protein spreading. Electron microscopy could complement these experiments by examining vesicle pool organization and redistribution [<a href="#ref-7">Ramírez-Franco et al., 2014</a>; <a href="#ref-39">Bolz et al., 2023</a>; <a href="#ref-45">Gimber et al., 2015</a>; <a href="#ref-46">Sankaranarayanan et al., 2000</a>; <a href="#ref-51">Chang et al., 2018</a>].</p>
+<h3>03 — Functional consequences for neurotransmission</h3><p>Electrophysiological recordings in autaptic hippocampal cultures could establish whether perturbing JMD-dependent interactions affects spontaneous and evoked release, the readily releasable pool and short-term plasticity during repetitive activity [<a href="#ref-55">Bouazza-Arostegui et al., 2022</a>].</p>
+<h3>04 — Nanoscale structure and dynamics</h3><p>High-speed atomic force microscopy (HS-AFM) and force-spectroscopy AFM in defined membrane systems could probe how gangliosides influence synaptotagmin organization, mobility and molecular interactions [<a href="#ref-56">Longarzo et al., 2024</a>; <a href="#ref-57">Li et al., 2024</a>].</p></div></details></div>
+</section>
+
+<section aria-labelledby="heading-our-contributions" class="article-section" id="our-contributions">
+<div class="article-heading"><span class="section-num">05 / 06</span><h2 id="heading-our-contributions">Our Contributions</h2></div>
+<div class="article-content"><p>This research line builds on previous studies spanning synaptic vesicle recycling, presynaptic ultrastructure and synaptotagmin–lipid interactions. Selected publications illustrate the continuity between these approaches.</p>
+<ul class="contributions-list">
+<li><b>Vesicle recycling and releasability</b><br/>Bartolomé-Martín, Ramírez-Franco et al. (2012). <i>Journal of Cell Science.</i> <a href="https://pubmed.ncbi.nlm.nih.gov/22331355/" rel="noopener noreferrer" target="_blank">Publication ↗</a><span class="contribution-note">Endocytic pathways and the regeneration of releasable synaptic vesicles during neuronal development.</span></li>
+<li><b>Presynaptic silencing and vesicle redistribution</b><br/>Ramírez-Franco et al. (2014). <i>PLOS ONE.</i> <a href="https://pubmed.ncbi.nlm.nih.gov/24533119/" rel="noopener noreferrer" target="_blank">Publication ↗</a><span class="contribution-note">Combining pHluorin imaging and electron microscopy to study regulation of synaptic vesicle release and organization.</span></li>
+<li><b>Ganglioside-dependent synaptotagmin organization</b><br/>Flores*, Ramírez-Franco* et al. (2019). <i>PNAS.</i> <a href="https://pubmed.ncbi.nlm.nih.gov/31431523/" rel="noopener noreferrer" target="_blank">Publication ↗</a><span class="contribution-note">Identification and structural characterization of SYT–ganglioside interactions. *Equal contribution.</span></li>
+<li><b>Structural organization of membrane-associated synaptotagmin complexes</b><br/>Ramírez-Franco et al. (2022). <i>Cellular and Molecular Life Sciences.</i> <a href="https://pubmed.ncbi.nlm.nih.gov/36006520/" rel="noopener noreferrer" target="_blank">Publication ↗</a><span class="contribution-note">Molecular modeling and experimental studies of membrane-associated SYT–ganglioside complexes, including identification of a naturally occurring felid SYT2 variant that prevents BoNT/B binding.</span></li>
+</ul><p class="contributions-footer"><a href="publications.html">View all publications ↗</a></p></div>
+</section>
+<section aria-labelledby="heading-references" class="article-section" id="references">
+<div class="article-heading"><span class="section-num">06 / 06</span><h2 id="heading-references">References</h2></div>
+<div class="article-content"><details class="references-panel" id="bibliography"><summary>Expand the selected bibliography <span class="reference-count">23 references</span></summary><ol class="references-list"><li id="ref-1">T. C. Südhof. Annual Review of Neuroscience (2004).</li>
+<li id="ref-2">N. L. Chanaday, M. A. Cousin, et al. Journal of Neuroscience (2019).</li>
+<li id="ref-5">D. Bartolomé-Martín, J. Ramírez-Franco, et al. Efficient synaptic vesicle recycling after intense exocytosis concomitant with the accumulation of non-releasable endosomes at early developmental stages. Journal of Cell Science (2012). <a href="https://pubmed.ncbi.nlm.nih.gov/22331355/" rel="noopener noreferrer" target="_blank">Article ↗</a></li>
+<li id="ref-7">J. Ramírez-Franco, D. Bartolomé-Martín, et al. Cannabinoid Type 1 Receptors Transiently Silence Glutamatergic Nerve Terminals of Cultured Cerebellar Granule Cells. PLOS ONE 9: e88594 (2014). <a href="https://pubmed.ncbi.nlm.nih.gov/24533119/" rel="noopener noreferrer" target="_blank">Article ↗</a></li>
+<li id="ref-24">A. Flores*, J. Ramírez-Franco*, et al. Gangliosides interact with synaptotagmin to form the high-affinity receptor complex for botulinum neurotoxin B. PNAS 116: 18098–18108 (2019). *Equal contribution. <a href="https://pubmed.ncbi.nlm.nih.gov/31431523/" rel="noopener noreferrer" target="_blank">Article ↗</a></li>
+<li id="ref-25">J. Ramírez-Franco, F. Azzaz, et al. Molecular landscape of BoNT/B bound to a membrane-inserted synaptotagmin/ganglioside complex. Cellular and Molecular Life Sciences (2022). <a href="https://pubmed.ncbi.nlm.nih.gov/36006520/" rel="noopener noreferrer" target="_blank">Article ↗</a></li>
+<li id="ref-27">T. C. Südhof. Neuron (2013).</li>
+<li id="ref-32">Y. Park, J.-K. Ryu. FEBS Letters (2018).</li>
+<li id="ref-33">T. W. Koh, H. J. Bellen. Trends in Neurosciences (2003).</li>
+<li id="ref-34">M. Geppert, Y. Goda, et al. Cell (1994).</li>
+<li id="ref-36">N. L. Chanaday, E. T. Kavalali. F1000Research (2017).</li>
+<li id="ref-37">F. Opazo, A. Punge, et al. Traffic (2010).</li>
+<li id="ref-38">Y. Chen, S. Hu, et al. PNAS (2022).</li>
+<li id="ref-39">S. Bolz, N. Kaempf, et al. Neuron (2023).</li>
+<li id="ref-40">S. O. Rizzoli. EMBO Journal (2014).</li>
+<li id="ref-41">K. I. Willig, S. O. Rizzoli, et al. Nature (2006).</li>
+<li id="ref-44">C. Pascual-Caro, J. de Juan-Sanz. PLOS Biology (2024).</li>
+<li id="ref-45">N. Gimber, G. Tadeus, et al. Nature Communications (2015).</li>
+<li id="ref-46">S. Sankaranarayanan, D. De Angelis, et al. Biophysical Journal (2000).</li>
+<li id="ref-51">S. Chang, T. Trimbuch, et al. Nature Neuroscience (2018).</li>
+<li id="ref-55">B. Bouazza-Arostegui, M. Camacho, et al. Journal of Neuroscience (2022).</li>
+<li id="ref-56">M. L. Longarzo, R. F. Vázquez, et al. iScience (2024).</li>
+<li id="ref-57">F. Li, J. Coleman, et al. Communications Biology (2024).</li></ol></details></div>
+</section></article>
+<aside aria-label="On this page" class="toc"><p class="toc-heading">On this page</p><a href="#overview">Overview</a><a href="#synaptotagmins">Synaptotagmins</a><a href="#gangliosides">SYT–ganglioside interactions</a><a href="#vesicle-identity">Vesicle identity</a><a href="#our-contributions">Our contributions</a><a href="#references">References</a></aside>
+</div>
+</main>
+<footer class="footer"><div class="container footer-inner"><span>© <span id="year"></span> Jorge Ramirez-Franco — All rights reserved</span><span>Synaptic vesicle recycling · Research overview</span></div></footer>
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+  const toggle = document.getElementById('menu-toggle');
+  const navMenu = document.getElementById('primary-navigation');
+  toggle.addEventListener('click', () => { const opened = navMenu.classList.toggle('is-open'); toggle.setAttribute('aria-expanded', String(opened)); });
+  navMenu.addEventListener('click', event => { if (event.target.closest('a')) { navMenu.classList.remove('is-open'); toggle.setAttribute('aria-expanded','false'); } });
+  document.addEventListener('keydown', event => { if (event.key === 'Escape') { navMenu.classList.remove('is-open'); toggle.setAttribute('aria-expanded','false'); } });
+  function openReference() { if (location.hash.startsWith('#ref-')) document.getElementById('bibliography').open = true; }
+  document.addEventListener('click', event => { const link = event.target.closest('a[href^="#ref-"]'); if (link) document.getElementById('bibliography').open = true; });
+  window.addEventListener('hashchange', openReference); openReference();
+</script>
+</body>
+</html>
